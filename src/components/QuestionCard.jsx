@@ -9,9 +9,14 @@ export default function QuestionCard({
   onSelect,
   onSubmit,
   onNext,
+  variant = 'practice',
 }) {
   const isCorrect = selected === question.answer
   const isLast = questionNumber === total
+  const isPractice = variant === 'practice'
+  const isReview = variant === 'review'
+  const showFeedback = isPractice ? revealed : isReview
+  const choicesLocked = showFeedback
 
   return (
     <section className="question-card">
@@ -25,14 +30,16 @@ export default function QuestionCard({
         <MarkdownMath>{question.prompt}</MarkdownMath>
       </div>
 
-      <fieldset className="choices" disabled={revealed}>
+      <fieldset className="choices" disabled={choicesLocked}>
         <legend className="visually-hidden">Answer choices</legend>
         {question.choices.map((choice, index) => {
           let choiceClass = 'choice'
-          if (revealed) {
+          if (showFeedback) {
             if (index === question.answer) choiceClass += ' choice-correct'
-            else if (index === selected) choiceClass += ' choice-wrong'
-          } else if (index === selected) {
+            else if (selected !== null && selected !== undefined && index === selected) {
+              choiceClass += ' choice-wrong'
+            }
+          } else if (selected === index) {
             choiceClass += ' choice-selected'
           }
 
@@ -53,7 +60,7 @@ export default function QuestionCard({
         })}
       </fieldset>
 
-      {!revealed ? (
+      {isPractice && !revealed ? (
         <button
           type="button"
           className="action-button"
@@ -62,7 +69,9 @@ export default function QuestionCard({
         >
           Submit
         </button>
-      ) : (
+      ) : null}
+
+      {isPractice && revealed ? (
         <div className="feedback">
           <p className={isCorrect ? 'feedback-ok' : 'feedback-bad'}>
             {isCorrect ? 'Correct' : 'Incorrect'}
@@ -74,7 +83,22 @@ export default function QuestionCard({
             {isLast ? 'See score' : 'Next'}
           </button>
         </div>
-      )}
+      ) : null}
+
+      {isReview ? (
+        <div className="feedback">
+          <p className={isCorrect ? 'feedback-ok' : 'feedback-bad'}>
+            {selected === undefined || selected === null
+              ? 'Unanswered'
+              : isCorrect
+                ? 'Correct'
+                : 'Incorrect'}
+          </p>
+          <div className="explanation">
+            <MarkdownMath>{question.explanation}</MarkdownMath>
+          </div>
+        </div>
+      ) : null}
     </section>
   )
 }

@@ -4,6 +4,21 @@ Frontend-only multiple-choice math practice app. Questions are Markdown with LaT
 
 Live site: [https://sandip-maurya.github.io/exercise/](https://sandip-maurya.github.io/exercise/)
 
+## Practice vs Quiz
+
+Each set offers two modes:
+
+| | Practice | Quiz |
+|--|----------|------|
+| Feedback | After each question | After you submit (or time runs out) |
+| Timer | None | `90 × number of questions` seconds |
+| Navigation | Forward only | Previous / Next and a question strip |
+| Unanswered | N/A (must answer to continue) | Count as incorrect |
+
+In quiz mode you can submit anytime. If some questions are blank, you get a confirm dialog. When time hits zero the quiz auto-submits (no confirm). Leaving mid-quiz asks for confirmation; progress is discarded.
+
+After a quiz score you can **Review answers** to see correct/incorrect choices and explanations.
+
 ## Local development
 
 ```bash
