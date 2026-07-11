@@ -1,0 +1,152 @@
+{
+  "id": "discrete-mathematics",
+  "title": "Discrete Mathematics",
+  "description": "Logic, sets, counting, and graphs — foundations of algorithms and CS.",
+  "questions": [
+    {
+      "id": "dm1",
+      "prompt": "The negation of \"$P$ and $Q$\" is:",
+      "choices": [
+        "$(\\text{not } P) \\text{ and } (\\text{not } Q)$",
+        "$(\\text{not } P) \\text{ or } (\\text{not } Q)$",
+        "$P \\text{ or } Q$",
+        "$P \\text{ and } (\\text{not } Q)$"
+      ],
+      "answer": 1,
+      "explanation": "De Morgan's law: $\\neg(P \\land Q) \\equiv (\\neg P) \\lor (\\neg Q)$.\n\nNegating an AND flips it to an OR of negations."
+    },
+    {
+      "id": "dm2",
+      "prompt": "An implication $P \\Rightarrow Q$ is false only when:",
+      "choices": [
+        "$P$ true, $Q$ true",
+        "$P$ true, $Q$ false",
+        "$P$ false, $Q$ true",
+        "$P$ false, $Q$ false"
+      ],
+      "answer": 1,
+      "explanation": "$P \\Rightarrow Q$ fails only when a true premise leads to a false conclusion.\n\nIf $P$ is false, the implication is considered true (vacuous truth)."
+    },
+    {
+      "id": "dm3",
+      "prompt": "If $A = \\{1,2,3\\}$ and $B = \\{2,3,4\\}$, then $A \\cap B =$",
+      "choices": [
+        "$\\{1,2,3,4\\}$",
+        "$\\{2,3\\}$",
+        "$\\{1,4\\}$",
+        "$\\emptyset$"
+      ],
+      "answer": 1,
+      "explanation": "Intersection contains elements in both sets: $2$ and $3$.\n\nSo $A \\cap B = \\{2, 3\\}$."
+    },
+    {
+      "id": "dm4",
+      "prompt": "If $|A| = 5$ and $|B| = 3$ and $A \\cap B = \\emptyset$, then $|A \\cup B| =$",
+      "choices": ["$2$", "$5$", "$8$", "$15$"],
+      "answer": 2,
+      "explanation": "For disjoint sets, $|A \\cup B| = |A| + |B| = 5 + 3 = 8$.\n\nIn general $|A \\cup B| = |A| + |B| - |A \\cap B|$."
+    },
+    {
+      "id": "dm5",
+      "prompt": "How many subsets does a set with $n$ elements have?",
+      "choices": ["$n$", "$n^2$", "$2^n$", "$n!$"],
+      "answer": 2,
+      "explanation": "Each element may be in or out of a subset: $2$ choices per element.\n\nTotal subsets: $2^n$ (including $\\emptyset$ and the set itself)."
+    },
+    {
+      "id": "dm6",
+      "prompt": "The number of ways to choose $2$ items from $5$ (order irrelevant) is $C(5,2) =$",
+      "choices": ["$5$", "$10$", "$20$", "$25$"],
+      "answer": 1,
+      "explanation": "$$C(n,k) = \\dfrac{n!}{k!(n-k)!} = \\dfrac{5!}{2! \\, 3!} = \\dfrac{120}{2 \\cdot 6} = 10.$$\n\nCombinations ignore order; permutations do not."
+    },
+    {
+      "id": "dm7",
+      "prompt": "$P(5,2)$ (permutations of $2$ out of $5$) equals:",
+      "choices": ["$10$", "$20$", "$25$", "$60$"],
+      "answer": 1,
+      "explanation": "$$P(n,k) = \\dfrac{n!}{(n-k)!} = 5 \\times 4 = 20.$$\n\nOrder matters: first choice $5$ options, second $4$."
+    },
+    {
+      "id": "dm8",
+      "prompt": "In a simple undirected graph, the handshaking lemma says the sum of degrees is:",
+      "choices": [
+        "Equal to the number of vertices",
+        "Equal to twice the number of edges",
+        "Always odd",
+        "Equal to the number of edges"
+      ],
+      "answer": 1,
+      "explanation": "Each edge contributes $1$ to the degree of two endpoints.\n\nSo $\\sum_v \\deg(v) = 2|E|$."
+    },
+    {
+      "id": "dm9",
+      "prompt": "A tree with $n$ vertices has how many edges?",
+      "choices": ["$n$", "$n - 1$", "$n + 1$", "$2n$"],
+      "answer": 1,
+      "explanation": "A tree is a connected acyclic graph.\n\nAny tree on $n$ vertices has exactly $n - 1$ edges."
+    },
+    {
+      "id": "dm10",
+      "prompt": "Big-O: which is true?",
+      "choices": [
+        "$n^2 = O(n)$",
+        "$n = O(n^2)$",
+        "$2^n = O(n)$",
+        "$n! = O(n)$"
+      ],
+      "answer": 1,
+      "explanation": "$f = O(g)$ means $f$ grows no faster than a constant times $g$ (asymptotically).\n\nSince $n \\leq n^2$ for $n \\geq 1$, we have $n = O(n^2)$. The reverse $n^2 = O(n)$ is false."
+    },
+    {
+      "id": "dm11",
+      "prompt": "Binary search on a sorted array of size $n$ has typical time complexity:",
+      "choices": ["$O(1)$", "$O(\\log n)$", "$O(n)$", "$O(n^2)$"],
+      "answer": 1,
+      "explanation": "Each step halves the search space.\n\nNumber of halvings until one element remains is about $\\log_2 n$, so $O(\\log n)$."
+    },
+    {
+      "id": "dm12",
+      "prompt": "Proof by induction requires a base case and:",
+      "choices": [
+        "Assuming the statement for $k$ and proving it for $k+1$",
+        "Only checking $n = 100$",
+        "Showing a counterexample",
+        "Using Bayes' theorem"
+      ],
+      "answer": 0,
+      "explanation": "Mathematical induction: prove $P(1)$ (or $P(0)$), then show $P(k) \\Rightarrow P(k+1)$.\n\nThis establishes $P(n)$ for all $n$ in the intended range."
+    },
+    {
+      "id": "dm13",
+      "prompt": "A function $f: A \\to B$ is injective (one-to-one) if:",
+      "choices": [
+        "$f(a_1) = f(a_2)$ implies $a_1 = a_2$",
+        "Every $b \\in B$ is hit",
+        "$A$ and $B$ are finite",
+        "$f$ is constant"
+      ],
+      "answer": 0,
+      "explanation": "Injective means distinct inputs map to distinct outputs.\n\nSurjective (onto) means every element of $B$ is an image."
+    },
+    {
+      "id": "dm14",
+      "prompt": "In propositional logic, $P \\lor \\neg P$ is:",
+      "choices": ["A contradiction", "A tautology", "Contingent only", "Undefined"],
+      "answer": 1,
+      "explanation": "Law of excluded middle: $P$ or not $P$ is always true.\n\nA tautology is true under every truth assignment."
+    },
+    {
+      "id": "dm15",
+      "prompt": "BFS (breadth-first search) on an unweighted graph finds:",
+      "choices": [
+        "A longest path always",
+        "Shortest paths in number of edges from the source",
+        "Only cycles",
+        "Maximum spanning trees only"
+      ],
+      "answer": 1,
+      "explanation": "BFS explores level by level.\n\nIn an unweighted graph, the first time a node is reached is via a minimum-edge path from the source."
+    }
+  ]
+}

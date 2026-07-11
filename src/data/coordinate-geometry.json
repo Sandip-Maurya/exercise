@@ -1,0 +1,142 @@
+{
+  "id": "coordinate-geometry",
+  "title": "Coordinate Geometry",
+  "description": "Points, lines, distances, and shapes in the plane — used in ML geometry and graphics.",
+  "questions": [
+    {
+      "id": "cg1",
+      "prompt": "Distance between $(0,0)$ and $(3,4)$ is:",
+      "choices": ["$5$", "$7$", "$12$", "$25$"],
+      "answer": 0,
+      "explanation": "Distance formula: $$d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} = \\sqrt{3^2 + 4^2} = 5.$$\n\nThis is the Euclidean norm of the vector $(3,4)$."
+    },
+    {
+      "id": "cg2",
+      "prompt": "Midpoint of $(2, 4)$ and $(6, 8)$ is:",
+      "choices": ["$(4, 6)$", "$(8, 12)$", "$(2, 4)$", "$(3, 5)$"],
+      "answer": 0,
+      "explanation": "Midpoint $= \\left(\\dfrac{x_1+x_2}{2},\\, \\dfrac{y_1+y_2}{2}\\right) = \\left(\\dfrac{2+6}{2},\\, \\dfrac{4+8}{2}\\right) = (4, 6)$."
+    },
+    {
+      "id": "cg3",
+      "prompt": "Slope of the line through $(1, 2)$ and $(3, 6)$ is:",
+      "choices": ["$1$", "$2$", "$3$", "$4$"],
+      "answer": 1,
+      "explanation": "$$m = \\dfrac{y_2 - y_1}{x_2 - x_1} = \\dfrac{6 - 2}{3 - 1} = \\dfrac{4}{2} = 2.$$"
+    },
+    {
+      "id": "cg4",
+      "prompt": "A line with slope $3$ through $(0, 1)$ has equation:",
+      "choices": [
+        "$y = 3x + 1$",
+        "$y = x + 3$",
+        "$y = 3x - 1$",
+        "$y = -3x + 1$"
+      ],
+      "answer": 0,
+      "explanation": "Slope-intercept form $y = mx + b$ with $m = 3$ and $y$-intercept $b = 1$.\n\nSo $y = 3x + 1$."
+    },
+    {
+      "id": "cg5",
+      "prompt": "Two lines with slopes $m_1$ and $m_2$ are perpendicular if:",
+      "choices": [
+        "$m_1 = m_2$",
+        "$m_1 m_2 = -1$",
+        "$m_1 + m_2 = 0$",
+        "$m_1 m_2 = 1$"
+      ],
+      "answer": 1,
+      "explanation": "Nonvertical perpendicular lines satisfy $m_1 m_2 = -1$.\n\nParallel lines instead have $m_1 = m_2$."
+    },
+    {
+      "id": "cg6",
+      "prompt": "The equation $x^2 + y^2 = 25$ represents a circle of radius:",
+      "choices": ["$5$", "$10$", "$25$", "$\\sqrt{5}$"],
+      "answer": 0,
+      "explanation": "Standard form $x^2 + y^2 = r^2$ is a circle centered at the origin.\n\nHere $r^2 = 25$, so $r = 5$."
+    },
+    {
+      "id": "cg7",
+      "prompt": "Center of the circle $(x-2)^2 + (y+3)^2 = 16$ is:",
+      "choices": ["$(2, 3)$", "$(2, -3)$", "$(-2, 3)$", "$(-2, -3)$"],
+      "answer": 1,
+      "explanation": "Form $(x-h)^2 + (y-k)^2 = r^2$ has center $(h,k)$.\n\nHere $h = 2$ and $k = -3$, so center $(2, -3)$. Radius is $4$."
+    },
+    {
+      "id": "cg8",
+      "prompt": "The $x$-intercept of $2x + 3y = 6$ is:",
+      "choices": ["$2$", "$3$", "$6$", "$0$"],
+      "answer": 1,
+      "explanation": "The $x$-intercept is where $y = 0$: $$2x + 3(0) = 6 \\implies 2x = 6 \\implies x = 3.$$\n\n(The $y$-intercept would be $x = 0$: $y = 2$.)"
+    },
+    {
+      "id": "cg9",
+      "prompt": "Area of a triangle with vertices $(0,0)$, $(4,0)$, $(0,3)$ is:",
+      "choices": ["$6$", "$7$", "$12$", "$24$"],
+      "answer": 0,
+      "explanation": "This is a right triangle with legs $4$ and $3$.\n\nArea $= \\dfrac{1}{2} \\times 4 \\times 3 = 6$."
+    },
+    {
+      "id": "cg10",
+      "prompt": "Vector from $A(1,1)$ to $B(4,5)$ is:",
+      "choices": [
+        "$\\langle 3, 4 \\rangle$",
+        "$\\langle 5, 6 \\rangle$",
+        "$\\langle 4, 5 \\rangle$",
+        "$\\langle -3, -4 \\rangle$"
+      ],
+      "answer": 0,
+      "explanation": "$\\overrightarrow{AB} = (x_B - x_A,\\, y_B - y_A) = (4-1,\\, 5-1) = \\langle 3, 4 \\rangle$."
+    },
+    {
+      "id": "cg11",
+      "prompt": "A unit vector in the direction of $\\langle 3, 4 \\rangle$ is:",
+      "choices": [
+        "$\\langle 3, 4 \\rangle$",
+        "$\\left\\langle \\dfrac{3}{5},\\, \\dfrac{4}{5} \\right\\rangle$",
+        "$\\langle 1, 1 \\rangle$",
+        "$\\left\\langle \\dfrac{3}{4},\\, 1 \\right\\rangle$"
+      ],
+      "answer": 1,
+      "explanation": "Divide by the length $5$: $$\\hat{\\mathbf{u}} = \\dfrac{\\langle 3,4 \\rangle}{5} = \\left\\langle \\dfrac{3}{5},\\, \\dfrac{4}{5} \\right\\rangle.$$\n\nUnit vectors are essential for directions and normalizing embeddings."
+    },
+    {
+      "id": "cg12",
+      "prompt": "The parabola $y = x^2$ opens:",
+      "choices": ["Left", "Right", "Up", "Down"],
+      "answer": 2,
+      "explanation": "For $y = ax^2$ with $a > 0$, the parabola opens upward.\n\nVertex is at the origin $(0,0)$."
+    },
+    {
+      "id": "cg13",
+      "prompt": "Section formula: point dividing join of $(x_1,y_1)$ and $(x_2,y_2)$ in ratio $1:1$ is the:",
+      "choices": ["Centroid only", "Midpoint", "Orthocenter", "Incenter"],
+      "answer": 1,
+      "explanation": "Ratio $1:1$ means equal segments — the midpoint.\n\nInternal division in $m:n$ is $\\left(\\dfrac{nx_1+mx_2}{m+n},\\, \\dfrac{ny_1+my_2}{m+n}\\right)$."
+    },
+    {
+      "id": "cg14",
+      "prompt": "Angle $\\theta$ between vectors $\\mathbf{a}$ and $\\mathbf{b}$ satisfies:",
+      "choices": [
+        "$\\cos\\theta = \\dfrac{\\mathbf{a}\\cdot\\mathbf{b}}{\\|\\mathbf{a}\\|\\|\\mathbf{b}\\|}$",
+        "$\\sin\\theta = \\mathbf{a}\\cdot\\mathbf{b}$",
+        "$\\theta = \\mathbf{a} + \\mathbf{b}$",
+        "$\\cos\\theta = \\|\\mathbf{a}\\|\\|\\mathbf{b}\\|$"
+      ],
+      "answer": 0,
+      "explanation": "From the dot product identity $\\mathbf{a}\\cdot\\mathbf{b} = \\|\\mathbf{a}\\|\\|\\mathbf{b}\\|\\cos\\theta$.\n\nCosine similarity in ML is exactly this formula on feature vectors."
+    },
+    {
+      "id": "cg15",
+      "prompt": "The line $ax + by + c = 0$ has normal vector proportional to:",
+      "choices": [
+        "$\\langle a, b \\rangle$",
+        "$\\langle b, a \\rangle$",
+        "$\\langle -b, a \\rangle$ only as normal",
+        "$\\langle c, c \\rangle$"
+      ],
+      "answer": 0,
+      "explanation": "The gradient of $ax+by+c$ is $\\langle a,b \\rangle$, which is normal (perpendicular) to the line.\n\nA direction vector along the line is $\\langle -b, a \\rangle$."
+    }
+  ]
+}

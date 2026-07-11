@@ -1,0 +1,167 @@
+{
+  "id": "algebra",
+  "title": "Algebra",
+  "description": "Equations, functions, exponents, and logs — foundations for ML math.",
+  "questions": [
+    {
+      "id": "alg1",
+      "prompt": "Solve for $x$: $$2x + 5 = 17$$",
+      "choices": ["$x = 5$", "$x = 6$", "$x = 11$", "$x = 12$"],
+      "answer": 1,
+      "explanation": "Subtract $5$ from both sides: $2x = 12$.\n\nDivide by $2$: $x = 6$."
+    },
+    {
+      "id": "alg2",
+      "prompt": "Simplify: $(3x^2 y)(2x y^3)$",
+      "choices": ["$5x^3 y^4$", "$6x^3 y^4$", "$6x^2 y^3$", "$5x^2 y^4$"],
+      "answer": 1,
+      "explanation": "Multiply coefficients: $3 \\cdot 2 = 6$.\n\nAdd exponents for like bases: $x^{2+1} = x^3$ and $y^{1+3} = y^4$.\n\nSo the product is $6x^3 y^4$."
+    },
+    {
+      "id": "alg3",
+      "prompt": "Expand: $(x + 3)(x - 2)$",
+      "choices": ["$x^2 + x - 6$", "$x^2 - x - 6$", "$x^2 + 5x - 6$", "$x^2 - 5x - 6$"],
+      "answer": 0,
+      "explanation": "Distribute (FOIL): $x \\cdot x + x \\cdot (-2) + 3 \\cdot x + 3 \\cdot (-2)$.\n\nThat is $x^2 - 2x + 3x - 6 = x^2 + x - 6$."
+    },
+    {
+      "id": "alg4",
+      "prompt": "If $f(x) = 2x - 1$, then $f(4) =$",
+      "choices": ["$5$", "$6$", "$7$", "$8$"],
+      "answer": 2,
+      "explanation": "Substitute $x = 4$: $f(4) = 2(4) - 1 = 8 - 1 = 7$.\n\nEvaluating a function means replacing the input variable with the given value."
+    },
+    {
+      "id": "alg5",
+      "prompt": "The inverse of $f(x) = 3x + 6$ is:",
+      "choices": [
+        "$f^{-1}(x) = \\dfrac{x - 6}{3}$",
+        "$f^{-1}(x) = 3x - 6$",
+        "$f^{-1}(x) = \\dfrac{x}{3} + 6$",
+        "$f^{-1}(x) = \\dfrac{x + 6}{3}$"
+      ],
+      "answer": 0,
+      "explanation": "Set $y = 3x + 6$, then swap: $x = 3y + 6$.\n\nSolve for $y$: $x - 6 = 3y$, so $y = \\dfrac{x - 6}{3}$.\n\nThus $f^{-1}(x) = \\dfrac{x - 6}{3}$. Check: $f(f^{-1}(x)) = x$."
+    },
+    {
+      "id": "alg6",
+      "prompt": "Simplify: $\\dfrac{x^2 - 9}{x - 3}$ for $x \\neq 3$",
+      "choices": ["$x - 3$", "$x + 3$", "$x^2 - 3$", "$x - 9$"],
+      "answer": 1,
+      "explanation": "Factor the numerator as a difference of squares: $x^2 - 9 = (x - 3)(x + 3)$.\n\nCancel $x - 3$ (valid when $x \\neq 3$): $\\dfrac{(x-3)(x+3)}{x-3} = x + 3$."
+    },
+    {
+      "id": "alg7",
+      "prompt": "Solve: $x^2 - 5x + 6 = 0$",
+      "choices": ["$x = 1, 6$", "$x = 2, 3$", "$x = -2, -3$", "$x = 0, 5$"],
+      "answer": 1,
+      "explanation": "Factor: $(x - 2)(x - 3) = 0$.\n\nSo $x - 2 = 0$ or $x - 3 = 0$, giving $x = 2$ or $x = 3$."
+    },
+    {
+      "id": "alg8",
+      "prompt": "Simplify: $a^3 \\cdot a^4$",
+      "choices": ["$a^7$", "$a^{12}$", "$a$", "$2a^7$"],
+      "answer": 0,
+      "explanation": "Product rule for exponents with the same base: $a^m \\cdot a^n = a^{m+n}$.\n\nSo $a^3 \\cdot a^4 = a^{7}$."
+    },
+    {
+      "id": "alg9",
+      "prompt": "Simplify: $(2^3)^2$",
+      "choices": ["$2^5$", "$2^6$", "$4^3$", "$2^9$"],
+      "answer": 1,
+      "explanation": "Power of a power: $(a^m)^n = a^{mn}$.\n\nSo $(2^3)^2 = 2^{6} = 64$. Note $2^5 = 32$ is incorrect."
+    },
+    {
+      "id": "alg10",
+      "prompt": "Solve: $3^{x} = 81$",
+      "choices": ["$x = 3$", "$x = 4$", "$x = 5$", "$x = 27$"],
+      "answer": 1,
+      "explanation": "Write $81$ as a power of $3$: $81 = 3^4$.\n\nSo $3^x = 3^4$ implies $x = 4$ (bases equal $\\Rightarrow$ exponents equal)."
+    },
+    {
+      "id": "alg11",
+      "prompt": "If $\\log_{10} 1000 = x$, then $x =$",
+      "choices": ["$2$", "$3$", "$4$", "$100$"],
+      "answer": 1,
+      "explanation": "By definition, $\\log_{10} 1000 = x$ means $10^x = 1000$.\n\nSince $10^3 = 1000$, we have $x = 3$."
+    },
+    {
+      "id": "alg12",
+      "prompt": "Simplify: $\\log_2 8 + \\log_2 4$",
+      "choices": ["$3$", "$4$", "$5$", "$6$"],
+      "answer": 2,
+      "explanation": "$\\log_2 8 = 3$ because $2^3 = 8$, and $\\log_2 4 = 2$ because $2^2 = 4$.\n\nSum: $3 + 2 = 5$.\n\nAlternatively, $\\log_2 8 + \\log_2 4 = \\log_2(8 \\cdot 4) = \\log_2 32 = 5$."
+    },
+    {
+      "id": "alg13",
+      "prompt": "Which expression equals $\\log_b (MN)$?",
+      "choices": [
+        "$\\log_b M + \\log_b N$",
+        "$\\log_b M \\cdot \\log_b N$",
+        "$\\log_b M - \\log_b N$",
+        "$\\dfrac{\\log_b M}{\\log_b N}$"
+      ],
+      "answer": 0,
+      "explanation": "The log product rule: $\\log_b(MN) = \\log_b M + \\log_b N$.\n\nThis is heavily used when simplifying likelihoods in machine learning (log-likelihoods turn products into sums)."
+    },
+    {
+      "id": "alg14",
+      "prompt": "Solve the inequality: $2x - 4 > 6$",
+      "choices": ["$x > 5$", "$x > 1$", "$x < 5$", "$x \\geq 5$"],
+      "answer": 0,
+      "explanation": "Add $4$: $2x > 10$.\n\nDivide by $2$: $x > 5$.\n\nDividing by a positive number preserves the inequality direction."
+    },
+    {
+      "id": "alg15",
+      "prompt": "The domain of $f(x) = \\dfrac{1}{x - 2}$ is all real $x$ except:",
+      "choices": ["$x = 0$", "$x = 1$", "$x = 2$", "$x = -2$"],
+      "answer": 2,
+      "explanation": "Division by zero is undefined, so $x - 2 \\neq 0$.\n\nThus $x \\neq 2$. The domain is $\\mathbb{R} \\setminus \\{2\\}$."
+    },
+    {
+      "id": "alg16",
+      "prompt": "If $y = mx + b$ is a line through $(0, 3)$ with slope $2$, then $b =$",
+      "choices": ["$0$", "$2$", "$3$", "$6$"],
+      "answer": 2,
+      "explanation": "In slope-intercept form, $b$ is the $y$-intercept — the value of $y$ when $x = 0$.\n\nThe point $(0, 3)$ means $b = 3$. The line is $y = 2x + 3$."
+    },
+    {
+      "id": "alg17",
+      "prompt": "Complete the square: $x^2 + 6x$ equals",
+      "choices": [
+        "$(x + 3)^2 - 9$",
+        "$(x + 3)^2 + 9$",
+        "$(x + 6)^2 - 36$",
+        "$(x + 3)^2$"
+      ],
+      "answer": 0,
+      "explanation": "Take half of $6$, which is $3$, and square it: $9$.\n\nThen $x^2 + 6x = (x + 3)^2 - 9$, because $(x+3)^2 = x^2 + 6x + 9$."
+    },
+    {
+      "id": "alg18",
+      "prompt": "Solve the system: $x + y = 5$ and $x - y = 1$",
+      "choices": [
+        "$x = 3,\\; y = 2$",
+        "$x = 2,\\; y = 3$",
+        "$x = 4,\\; y = 1$",
+        "$x = 1,\\; y = 4$"
+      ],
+      "answer": 0,
+      "explanation": "Add the equations: $2x = 6$, so $x = 3$.\n\nFrom $x + y = 5$: $3 + y = 5$, so $y = 2$.\n\nCheck: $3 - 2 = 1$."
+    },
+    {
+      "id": "alg19",
+      "prompt": "Simplify: $\\sqrt{50}$",
+      "choices": ["$5\\sqrt{2}$", "$25\\sqrt{2}$", "$10\\sqrt{5}$", "$5\\sqrt{10}$"],
+      "answer": 0,
+      "explanation": "Factor out a perfect square: $50 = 25 \\cdot 2$.\n\nSo $\\sqrt{50} = \\sqrt{25 \\cdot 2} = \\sqrt{25}\\,\\sqrt{2} = 5\\sqrt{2}$."
+    },
+    {
+      "id": "alg20",
+      "prompt": "If $f(x) = x^2$ and $g(x) = x + 1$, then $(f \\circ g)(x) =$",
+      "choices": ["$x^2 + 1$", "$(x + 1)^2$", "$x^2 + x + 1$", "$x(x + 1)$"],
+      "answer": 1,
+      "explanation": "Composition $(f \\circ g)(x) = f(g(x))$.\n\nFirst $g(x) = x + 1$, then $f(x+1) = (x+1)^2$.\n\nNote that $(g \\circ f)(x) = x^2 + 1$ is different — composition order matters."
+    }
+  ]
+}

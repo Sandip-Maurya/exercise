@@ -1,0 +1,182 @@
+{
+  "id": "differential-equations",
+  "title": "Differential Equations",
+  "description": "Rates of change and dynamical systems — models in physics AI and deep learning theory.",
+  "questions": [
+    {
+      "id": "de1",
+      "prompt": "The order of the DE $y'' + y' - 2y = 0$ is:",
+      "choices": ["$0$", "$1$", "$2$", "$3$"],
+      "answer": 2,
+      "explanation": "Order is the highest derivative present.\n\nHere $y''$ is the highest, so the equation is second-order."
+    },
+    {
+      "id": "de2",
+      "prompt": "A solution of $\\dfrac{dy}{dx} = 2x$ is:",
+      "choices": [
+        "$y = x^2 + C$",
+        "$y = 2x + C$",
+        "$y = 2$",
+        "$y = e^{2x}$"
+      ],
+      "answer": 0,
+      "explanation": "Integrate both sides: $y = \\int 2x\\,dx = x^2 + C$.\n\nDifferentiate to check: $\\dfrac{d}{dx}(x^2 + C) = 2x$."
+    },
+    {
+      "id": "de3",
+      "prompt": "The DE $\\dfrac{dy}{dx} = ky$ (constant $k$) has solutions of the form:",
+      "choices": [
+        "$y = kx + C$",
+        "$y = Ce^{kx}$",
+        "$y = C\\sin(kx)$",
+        "$y = \\dfrac{k}{x}$"
+      ],
+      "answer": 1,
+      "explanation": "Separable: $\\dfrac{dy}{y} = k\\,dx$. Integrate: $\\ln|y| = kx + C_1$.\n\nSo $y = Ce^{kx}$. Exponential growth/decay — common in population models and residual networks intuition."
+    },
+    {
+      "id": "de4",
+      "prompt": "Separating variables for $\\dfrac{dy}{dx} = xy$ gives:",
+      "choices": [
+        "$\\dfrac{dy}{y} = x\\,dx$",
+        "$dy = xy$",
+        "$y\\,dy = x\\,dx$",
+        "$\\dfrac{dx}{x} = y\\,dy$"
+      ],
+      "answer": 0,
+      "explanation": "Write $\\dfrac{dy}{dx} = xy$ as $\\dfrac{1}{y}\\,dy = x\\,dx$ (assuming $y \\neq 0$).\n\nThen integrate both sides."
+    },
+    {
+      "id": "de5",
+      "prompt": "Initial condition for $\\dfrac{dy}{dx} = 2x$, $y(0) = 3$ yields:",
+      "choices": [
+        "$y = x^2$",
+        "$y = x^2 + 3$",
+        "$y = 2x + 3$",
+        "$y = 3x^2$"
+      ],
+      "answer": 1,
+      "explanation": "General solution $y = x^2 + C$.\n\nApply $y(0) = 3$: $0 + C = 3$, so $C = 3$. Thus $y = x^2 + 3$."
+    },
+    {
+      "id": "de6",
+      "prompt": "The equation $y' + P(x)y = Q(x)$ is called:",
+      "choices": [
+        "A second-order nonlinear DE",
+        "A first-order linear DE",
+        "Laplace's equation",
+        "An algebraic equation only"
+      ],
+      "answer": 1,
+      "explanation": "It is first-order (only $y'$) and linear in $y$ and $y'$.\n\nSolved with an integrating factor $\\mu = e^{\\int P\\,dx}$."
+    },
+    {
+      "id": "de7",
+      "prompt": "Integrating factor for $y' + 2y = e^{-x}$ is:",
+      "choices": [
+        "$e^{2x}$",
+        "$e^{-2x}$",
+        "$e^{x}$",
+        "$2x$"
+      ],
+      "answer": 0,
+      "explanation": "Here $P(x) = 2$, so $\\mu(x) = e^{\\int 2\\,dx} = e^{2x}$.\n\nMultiply through: $(e^{2x} y)' = e^{2x} e^{-x} = e^{x}$."
+    },
+    {
+      "id": "de8",
+      "prompt": "Characteristic equation of $y'' - 3y' + 2y = 0$ is:",
+      "choices": [
+        "$r^2 - 3r + 2 = 0$",
+        "$r^2 + 3r + 2 = 0$",
+        "$r - 3 = 0$",
+        "$r^2 = 2$"
+      ],
+      "answer": 0,
+      "explanation": "Assume $y = e^{rx}$. Substitute to get $r^2 - 3r + 2 = 0$.\n\nFactor $(r-1)(r-2)=0$, so roots $r=1,2$ and $y = C_1 e^{x} + C_2 e^{2x}$."
+    },
+    {
+      "id": "de9",
+      "prompt": "For $y'' + \\omega^2 y = 0$ ($\\omega > 0$), solutions are:",
+      "choices": [
+        "Exponentials $e^{\\omega x}$ only",
+        "Sines and cosines with frequency $\\omega$",
+        "Polynomials only",
+        "Constants only"
+      ],
+      "answer": 1,
+      "explanation": "Characteristic roots $\\pm i\\omega$ give $$y = C_1 \\cos(\\omega x) + C_2 \\sin(\\omega x).$$\n\nThis is simple harmonic motion — oscillatory solutions."
+    },
+    {
+      "id": "de10",
+      "prompt": "Equilibrium solutions of $\\dfrac{dy}{dt} = y(1-y)$ occur where:",
+      "choices": [
+        "$y = 0$ or $y = 1$",
+        "$y = -1$ only",
+        "$y = 2$",
+        "No equilibria"
+      ],
+      "answer": 0,
+      "explanation": "Equilibria satisfy $\\dfrac{dy}{dt} = 0$: $y(1-y) = 0$, so $y = 0$ or $y = 1$.\n\nThis logistic equation is a classic nonlinear model."
+    },
+    {
+      "id": "de11",
+      "prompt": "Euler's method approximates $y' = f(x,y)$ by:",
+      "choices": [
+        "$y_{n+1} = y_n + h f(x_n, y_n)$",
+        "$y_{n+1} = y_n - h$",
+        "$y_{n+1} = f(y_n)$",
+        "$y_{n+1} = y_n / h$"
+      ],
+      "answer": 0,
+      "explanation": "Euler steps along the tangent: $$y_{n+1} = y_n + h f(x_n, y_n)$$\n\nwith step size $h$. It is the simplest numerical ODE solver — related to residual-network updates."
+    },
+    {
+      "id": "de12",
+      "prompt": "A PDE involves:",
+      "choices": [
+        "Only ordinary derivatives in one variable",
+        "Partial derivatives with respect to multiple independent variables",
+        "No derivatives",
+        "Only integrals"
+      ],
+      "answer": 1,
+      "explanation": "PDEs (e.g. heat, wave, Laplace equations) involve $\\partial u/\\partial t$, $\\partial^2 u/\\partial x^2$, etc.\n\nThey model fields in space and time — central in physics-informed neural nets."
+    },
+    {
+      "id": "de13",
+      "prompt": "The homogeneous linear system $\\mathbf{x}' = A\\mathbf{x}$ has solutions built from:",
+      "choices": [
+        "Eigenpairs of $A$",
+        "Only the determinant of $A$",
+        "Random vectors",
+        "The trace alone"
+      ],
+      "answer": 0,
+      "explanation": "If $A\\mathbf{v} = \\lambda\\mathbf{v}$, then $\\mathbf{x}(t) = e^{\\lambda t}\\mathbf{v}$ solves the system.\n\nGeneral solutions combine such modes (with modifications for defective matrices)."
+    },
+    {
+      "id": "de14",
+      "prompt": "Gradient descent $\\theta_{t+1} = \\theta_t - \\eta \\nabla L(\\theta_t)$ most resembles discretizing:",
+      "choices": [
+        "$\\dfrac{d\\theta}{dt} = -\\nabla L(\\theta)$",
+        "$\\dfrac{d\\theta}{dt} = \\nabla L(\\theta)$",
+        "$\\dfrac{d^2\\theta}{dt^2} = 0$",
+        "$\\theta = L(\\theta)$"
+      ],
+      "answer": 0,
+      "explanation": "Continuous gradient flow is $\\dot{\\theta} = -\\nabla L(\\theta)$ (descend the loss).\n\nEuler discretization with step $\\eta$ recovers gradient descent."
+    },
+    {
+      "id": "de15",
+      "prompt": "Which is a particular solution approach for $y'' + y = \\sin x$?",
+      "choices": [
+        "Undetermined coefficients / variation of parameters",
+        "Only guessing $y = x$",
+        "Setting $y'' = 0$ always",
+        "Ignoring the $\\sin x$ term"
+      ],
+      "answer": 0,
+      "explanation": "For nonhomogeneous linear DEs, find the homogeneous solution plus a particular solution.\n\nStandard tools: undetermined coefficients or variation of parameters."
+    }
+  ]
+}

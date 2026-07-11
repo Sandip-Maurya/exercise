@@ -1,0 +1,187 @@
+{
+  "id": "calculus",
+  "title": "Calculus",
+  "description": "Limits, derivatives, applications, and basic integrals.",
+  "questions": [
+    {
+      "id": "calc1",
+      "prompt": "Evaluate: $\\lim\\limits_{x \\to 3} (2x + 1)$",
+      "choices": ["$5$", "$6$", "$7$", "$8$"],
+      "answer": 2,
+      "explanation": "The function $f(x) = 2x + 1$ is a polynomial, so it is continuous everywhere.\n\nFor a continuous function, the limit equals the function value: $\\lim\\limits_{x \\to 3} (2x + 1) = 2(3) + 1 = 6 + 1 = 7$."
+    },
+    {
+      "id": "calc2",
+      "prompt": "Evaluate: $\\lim\\limits_{x \\to 2} \\dfrac{x^2 - 4}{x - 2}$",
+      "choices": ["$0$", "$2$", "$4$", "Does not exist"],
+      "answer": 2,
+      "explanation": "Direct substitution gives $\\dfrac{0}{0}$, an indeterminate form.\n\nFactor the numerator as a difference of squares: $$\\dfrac{x^2 - 4}{x - 2} = \\dfrac{(x - 2)(x + 2)}{x - 2}.$$\n\nFor $x \\neq 2$, cancel $x - 2$ to get $x + 2$. Therefore $\\lim\\limits_{x \\to 2} \\dfrac{x^2 - 4}{x - 2} = \\lim\\limits_{x \\to 2} (x + 2) = 2 + 2 = 4$.\n\nThe original function is undefined at $x = 2$, but the limit still exists."
+    },
+    {
+      "id": "calc3",
+      "prompt": "Evaluate: $\\lim\\limits_{x \\to \\infty} \\dfrac{3x^2 + 1}{x^2 - 5}$",
+      "choices": ["$0$", "$1$", "$3$", "$\\infty$"],
+      "answer": 2,
+      "explanation": "For rational functions as $x \\to \\infty$, divide the numerator and denominator by the highest power of $x$ in the denominator, here $x^2$: $$\\dfrac{3x^2 + 1}{x^2 - 5} = \\dfrac{3 + \\dfrac{1}{x^2}}{1 - \\dfrac{5}{x^2}}.$$\n\nAs $x \\to \\infty$, $\\dfrac{1}{x^2} \\to 0$ and $\\dfrac{5}{x^2} \\to 0$, so the limit is $\\dfrac{3}{1} = 3$.\n\nEquivalently, the leading-coefficient ratio of two degree-$2$ polynomials is $\\dfrac{3}{1} = 3$."
+    },
+    {
+      "id": "calc4",
+      "prompt": "If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, the Mean Value Theorem guarantees some $c \\in (a,b)$ with:",
+      "choices": [
+        "$f'(c) = 0$",
+        "$f'(c) = \\dfrac{f(b) - f(a)}{b - a}$",
+        "$f'(c) = f(b) - f(a)$",
+        "$f'(c) = \\dfrac{f(a) + f(b)}{2}$"
+      ],
+      "answer": 1,
+      "explanation": "The Mean Value Theorem says that under these hypotheses, there is at least one $c$ in $(a,b)$ such that the instantaneous rate of change equals the average rate of change over $[a,b]$: $$f'(c) = \\dfrac{f(b) - f(a)}{b - a}.$$\n\nGeometrically, the tangent at $c$ is parallel to the secant from $(a, f(a))$ to $(b, f(b))$.\n\nNote that $f'(c) = 0$ is Rolle's theorem, a special case when $f(a) = f(b)$."
+    },
+    {
+      "id": "calc5",
+      "prompt": "If $f(x) = x^3 - 4x$, then $f'(x) =$",
+      "choices": ["$3x^2 - 4$", "$3x^2 - 4x$", "$x^2 - 4$", "$3x - 4$"],
+      "answer": 0,
+      "explanation": "Differentiate term by term using the power rule $\\dfrac{d}{dx}(x^n) = n x^{n-1}$ and the constant-multiple rule: $$\\dfrac{d}{dx}(x^3) = 3x^2, \\qquad \\dfrac{d}{dx}(-4x) = -4.$$\n\nSo $f'(x) = 3x^2 - 4$.\n\nA common mistake is writing $-4x$ instead of $-4$, or lowering the power incorrectly."
+    },
+    {
+      "id": "calc6",
+      "prompt": "If $f(x) = \\sin x$, then $f'\\!\\left(\\dfrac{\\pi}{3}\\right) =$",
+      "choices": ["$\\dfrac{1}{2}$", "$\\dfrac{\\sqrt{3}}{2}$", "$1$", "$-\\dfrac{1}{2}$"],
+      "answer": 0,
+      "explanation": "The derivative of $\\sin x$ is $\\cos x$, so $f'(x) = \\cos x$.\n\nEvaluate at $x = \\dfrac{\\pi}{3}$: $$f'\\!\\left(\\dfrac{\\pi}{3}\\right) = \\cos\\dfrac{\\pi}{3} = \\dfrac{1}{2}.$$\n\nDo not confuse this with $\\sin\\dfrac{\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$, which is the value of $f$ itself, not $f'$."
+    },
+    {
+      "id": "calc7",
+      "prompt": "Differentiate: $f(x) = (3x + 1)^5$",
+      "choices": [
+        "$5(3x + 1)^4$",
+        "$15(3x + 1)^4$",
+        "$5(3x + 1)^5$",
+        "$(3x + 1)^4$"
+      ],
+      "answer": 1,
+      "explanation": "Use the chain rule. Let $u = 3x + 1$, so $f = u^5$.\n\nThen $$\\dfrac{df}{dx} = \\dfrac{df}{du} \\cdot \\dfrac{du}{dx} = 5u^4 \\cdot 3 = 5(3x + 1)^4 \\cdot 3 = 15(3x + 1)^4.$$\n\nForgetting to multiply by the inner derivative $3$ is a frequent error and leads to the incorrect answer $5(3x+1)^4$."
+    },
+    {
+      "id": "calc8",
+      "prompt": "If $f(x) = x^2 e^x$, then $f'(x) =$",
+      "choices": [
+        "$2x e^x$",
+        "$x^2 e^x$",
+        "$e^x(2x + x^2)$",
+        "$e^x(2x - x^2)$"
+      ],
+      "answer": 2,
+      "explanation": "This is a product $u(x)v(x)$ with $u = x^2$ and $v = e^x$. The product rule says $(uv)' = u'v + uv'$: $$f'(x) = (2x)e^x + x^2(e^x) = 2x e^x + x^2 e^x.$$\n\nFactor out $e^x$: $$f'(x) = e^x(2x + x^2).$$\n\nDifferentiating only one factor (and ignoring the other) produces the incomplete answers $2xe^x$ or $x^2 e^x$."
+    },
+    {
+      "id": "calc9",
+      "prompt": "If $f(x) = \\dfrac{x}{x + 1}$, then $f'(x) =$",
+      "choices": [
+        "$\\dfrac{1}{(x+1)^2}$",
+        "$\\dfrac{-1}{(x+1)^2}$",
+        "$\\dfrac{1}{x+1}$",
+        "$\\dfrac{x}{(x+1)^2}$"
+      ],
+      "answer": 0,
+      "explanation": "Apply the quotient rule $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$ with $u = x$ and $v = x + 1$: $$f'(x) = \\dfrac{(1)(x+1) - (x)(1)}{(x+1)^2} = \\dfrac{x + 1 - x}{(x+1)^2} = \\dfrac{1}{(x+1)^2}.$$\n\nReversing the order in the numerator ($uv' - u'v$) would incorrectly give a negative sign."
+    },
+    {
+      "id": "calc10",
+      "prompt": "The slope of the tangent line to $y = x^2$ at $x = 3$ is:",
+      "choices": ["$3$", "$6$", "$9$", "$12$"],
+      "answer": 1,
+      "explanation": "The slope of the tangent at a point is the derivative evaluated there.\n\nDifferentiate: $\\dfrac{dy}{dx} = 2x$. At $x = 3$: $$\\text{slope} = 2 \\cdot 3 = 6.$$\n\nNote that $y(3) = 9$ is the $y$-coordinate of the point of tangency, not the slope."
+    },
+    {
+      "id": "calc11",
+      "prompt": "An equation of the tangent line to $y = \\sqrt{x}$ at $x = 4$ is:",
+      "choices": [
+        "$y = \\dfrac{1}{4}x + 1$",
+        "$y = \\dfrac{1}{2}x$",
+        "$y = \\dfrac{1}{4}x$",
+        "$y = 2x - 6$"
+      ],
+      "answer": 0,
+      "explanation": "Rewrite $y = x^{1/2}$. Then $$y' = \\dfrac{1}{2}x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}.$$\n\nAt $x = 4$, the slope is $\\dfrac{1}{2\\sqrt{4}} = \\dfrac{1}{4}$. The point on the curve is $(4, \\sqrt{4}) = (4, 2)$.\n\nPoint-slope form: $$y - 2 = \\dfrac{1}{4}(x - 4) \\implies y = \\dfrac{1}{4}x - 1 + 2 = \\dfrac{1}{4}x + 1.$$"
+    },
+    {
+      "id": "calc12",
+      "prompt": "Critical points of $f(x) = x^3 - 3x$ occur where $f'(x) = 0$. Those $x$-values are:",
+      "choices": [
+        "$x = 0$ only",
+        "$x = \\pm 1$",
+        "$x = \\pm 3$",
+        "$x = \\pm \\sqrt{3}$"
+      ],
+      "answer": 1,
+      "explanation": "First find the derivative: $$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1).$$\n\nSet $f'(x) = 0$: $x - 1 = 0$ or $x + 1 = 0$, so $x = 1$ or $x = -1$. Thus the critical points are at $x = \\pm 1$.\n\n(Here $f'$ exists everywhere, so there are no critical points from an undefined derivative.)"
+    },
+    {
+      "id": "calc13",
+      "prompt": "On $(-\\infty, \\infty)$, $f(x) = x^3 - 3x$ has a local maximum at:",
+      "choices": ["$x = -1$", "$x = 0$", "$x = 1$", "$x = 3$"],
+      "answer": 0,
+      "explanation": "From the previous idea, $f'(x) = 3(x^2 - 1) = 3(x-1)(x+1)$. Use the first-derivative test:\n\n- On $(-\\infty, -1)$, pick $x = -2$: $f'(-2) > 0$ (increasing).\n- On $(-1, 1)$, pick $x = 0$: $f'(0) < 0$ (decreasing).\n- On $(1, \\infty)$, pick $x = 2$: $f'(2) > 0$ (increasing).\n\nSo $f'$ changes from positive to negative at $x = -1$, which is a local maximum.\n\nAt $x = 1$, $f'$ changes from negative to positive, a local minimum."
+    },
+    {
+      "id": "calc14",
+      "prompt": "If $\\dfrac{dy}{dx} = 6x$ and $y(0) = 5$, then $y =$",
+      "choices": ["$3x^2$", "$3x^2 + 5$", "$6x + 5$", "$x^2 + 5$"],
+      "answer": 1,
+      "explanation": "Integrate both sides to recover $y$: $$y = \\int 6x\\, dx = 3x^2 + C.$$\n\nApply the initial condition $y(0) = 5$: $$3(0)^2 + C = 5 \\implies C = 5.$$\n\nTherefore $y = 3x^2 + 5$. Leaving out $C$ (or choosing the wrong antiderivative, such as $x^2$) fails to satisfy $y(0) = 5$."
+    },
+    {
+      "id": "calc15",
+      "prompt": "Evaluate: $$\\int (4x^3 - 2x)\\, dx$$",
+      "choices": [
+        "$x^4 - x^2 + C$",
+        "$12x^2 - 2 + C$",
+        "$4x^4 - 2x^2 + C$",
+        "$x^4 - x + C$"
+      ],
+      "answer": 0,
+      "explanation": "Integrate term by term with the power rule $\\int x^n\\,dx = \\dfrac{x^{n+1}}{n+1} + C$ (for $n \\neq -1$): $$\\int 4x^3\\,dx = 4 \\cdot \\dfrac{x^4}{4} = x^4, \\qquad \\int -2x\\,dx = -2 \\cdot \\dfrac{x^2}{2} = -x^2.$$\n\nSo $$\\int (4x^3 - 2x)\\,dx = x^4 - x^2 + C.$$\n\nDifferentiating the answer recovers $4x^3 - 2x$, which checks the result. The choice $12x^2 - 2$ is the derivative, not the integral."
+    },
+    {
+      "id": "calc16",
+      "prompt": "Evaluate: $$\\int_0^2 (3x^2 + 1)\\, dx$$",
+      "choices": ["$8$", "$9$", "$10$", "$12$"],
+      "answer": 2,
+      "explanation": "Find an antiderivative $F(x) = x^3 + x$.\n\nBy the Fundamental Theorem of Calculus, $$\\int_0^2 (3x^2 + 1)\\,dx = F(2) - F(0) = (2^3 + 2) - (0^3 + 0) = (8 + 2) - 0 = 10.$$"
+    },
+    {
+      "id": "calc17",
+      "prompt": "By the Fundamental Theorem of Calculus, if $F(x) = \\int_0^x \\cos t\\, dt$, then $F'(x) =$",
+      "choices": ["$\\sin x$", "$\\cos x$", "$-\\sin x$", "$\\sin x - 1$"],
+      "answer": 1,
+      "explanation": "FTC Part 1 states that if $f$ is continuous, then $$\\dfrac{d}{dx}\\int_a^x f(t)\\,dt = f(x).$$\n\nHere the integrand is $\\cos t$ and the upper limit is $x$, so $F'(x) = \\cos x$.\n\nYou do not need to evaluate the integral first: although $F(x) = \\sin x - \\sin 0 = \\sin x$ and then $F'(x) = \\cos x$, the FTC gives that answer directly."
+    },
+    {
+      "id": "calc18",
+      "prompt": "Evaluate using substitution: $$\\int 2x(x^2 + 1)^3\\, dx$$",
+      "choices": [
+        "$(x^2 + 1)^4 + C$",
+        "$\\dfrac{1}{2}(x^2 + 1)^4 + C$",
+        "$\\dfrac{1}{4}(x^2 + 1)^4 + C$",
+        "$2(x^2 + 1)^4 + C$"
+      ],
+      "answer": 2,
+      "explanation": "Let $u = x^2 + 1$. Then $du = 2x\\,dx$, which matches the factor already in the integrand.\n\nSubstitute: $$\\int 2x(x^2 + 1)^3\\,dx = \\int u^3\\,du = \\dfrac{u^4}{4} + C = \\dfrac{1}{4}(x^2 + 1)^4 + C.$$\n\nCheck by differentiating: the chain rule brings back a factor of $2x$ and cancels the $\\dfrac{1}{4}$ with the $4$ from the power rule."
+    },
+    {
+      "id": "calc19",
+      "prompt": "The area under $y = 2x$ from $x = 0$ to $x = 3$ is:",
+      "choices": ["$3$", "$6$", "$9$", "$12$"],
+      "answer": 2,
+      "explanation": "The area is the definite integral $$\\int_0^3 2x\\,dx = \\big[x^2\\big]_0^3 = 3^2 - 0^2 = 9.$$\n\nGeometrically, the region is a right triangle with base $3$ and height $y(3) = 6$, so area $= \\dfrac{1}{2} \\cdot 3 \\cdot 6 = 9$, confirming the integral."
+    },
+    {
+      "id": "calc20",
+      "prompt": "If a particle's position is $s(t) = t^3 - 6t^2 + 9t$, its velocity at $t = 2$ is:",
+      "choices": ["$-3$", "$-1$", "$0$", "$3$"],
+      "answer": 0,
+      "explanation": "Velocity is the derivative of position: $$v(t) = s'(t) = 3t^2 - 12t + 9.$$\n\nAt $t = 2$: $$v(2) = 3(2)^2 - 12(2) + 9 = 3 \\cdot 4 - 24 + 9 = 12 - 24 + 9 = -3.$$\n\nA negative velocity means the particle is moving in the negative direction at that instant. (Acceleration would be $v'(t)$, which is not asked here.)"
+    }
+  ]
+}
