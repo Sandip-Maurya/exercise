@@ -34,4 +34,4 @@ Question fields: `id`, `prompt`, `choices`, `answer` (0-based index), `explanati
 
 Live URL (project site):
 
-`https://<your-username>.github.io/exercise/`
+`https://sandip-maurya.github.io/exercise/`
