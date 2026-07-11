@@ -75,8 +75,13 @@
   font-weight: 600;
 }
 
-.set-button-meta {
+.set-button-description {
   font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.set-button-meta {
+  font-size: 0.85rem;
   color: var(--muted);
 }
 

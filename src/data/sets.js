@@ -1,15 +1,16 @@
-import algebraBasics from './algebra-basics.json'
-import quadraticEquations from './quadratic-equations.json'
+const modules = import.meta.glob('./*.json', { eager: true })
 
-export const exerciseSets = [
-  {
-    id: 'algebra-basics',
-    title: 'Algebra Basics',
-    questions: algebraBasics,
-  },
-  {
-    id: 'quadratic-equations',
-    title: 'Quadratic Equations',
-    questions: quadraticEquations,
-  },
-]
+function isValidSet(set) {
+  return (
+    set &&
+    typeof set.id === 'string' &&
+    typeof set.title === 'string' &&
+    Array.isArray(set.questions) &&
+    set.questions.length > 0
+  )
+}
+
+export const exerciseSets = Object.values(modules)
+  .map((mod) => mod.default)
+  .filter(isValidSet)
+  .sort((a, b) => a.title.localeCompare(b.title))

@@ -12,6 +12,9 @@ export default function SetPicker({ sets, onSelect }) {
               onClick={() => onSelect(set)}
             >
               <span className="set-button-title">{set.title}</span>
+              {set.description ? (
+                <span className="set-button-description">{set.description}</span>
+              ) : null}
               <span className="set-button-meta">
                 {set.questions.length} questions
               </span>
