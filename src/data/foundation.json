@@ -1,0 +1,182 @@
+{
+  "id": "foundation-module-1",
+  "title": "Foundations Module 1 MCQ Test",
+  "description": "Module: Foundations · Duration: 50 minutes (2 minutes per question) · Questions: 25 · Level: Difficult",
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "If $\\alpha$ and $\\beta$ are roots of $x^2 - 3x + 1 = 0$, then $\\alpha^4 + \\beta^4$ equals",
+      "choices": ["$47$","$49$","$51$","$53$"],
+      "answer": 0,
+      "explanation": "Using $\\alpha+\\beta=3$, $\\alpha\\beta=1$: $\\alpha^2+\\beta^2=(\\alpha+\\beta)^2-2\\alpha\\beta=7$. Then $\\alpha^4+\\beta^4=(\\alpha^2+\\beta^2)^2-2\\alpha^2\\beta^2=49-2=47."
+    },
+    {
+      "id": "q2",
+      "prompt": "The number of real solutions of $|x^2 - 3x| + |x - 1| = 3$ is",
+      "choices": ["2","3","4","5"],
+      "answer": 1,
+      "explanation": "Split at $x=0,1,3$ and solve on each piece; the three real roots are $2-\\sqrt{6}$, $2$, and $1+\\sqrt{5}$ giving 3 solutions."
+    },
+    {
+      "id": "q3",
+      "prompt": "The solution set of $\\dfrac{x^2 - 5x + 6}{x^2 - 4} \\leq 0$ is",
+      "choices": ["$(-2,2)\\cup(2,3]$","$(-2,2]\\cup[3,\\infty)$","$[-2,3]\\setminus\\{2\\}$","$(-2,3)$"],
+      "answer": 0,
+      "explanation": "For $x\\neq\\pm2$ the fraction reduces to $\\dfrac{x-3}{x+2}\\le 0$ so $x\\in(-2,3]\\setminus\\{2\\}=(-2,2)\\cup(2,3]$."
+    },
+    {
+      "id": "q4",
+      "prompt": "If $\\log_2(x-1) + \\log_2(x+3) = 3$, then $x$ equals",
+      "choices": ["$-1 + 2\\sqrt{3}$","$5$","$-1 - 2\\sqrt{3}$","$1 + 2\\sqrt{3}$"],
+      "answer": 0,
+      "explanation": "Domain $x>1$. Multiply: $(x-1)(x+3)=8\\Rightarrow x^2+2x-11=0\\Rightarrow x=-1\\pm 2\\sqrt{3}$. Only $-1+2\\sqrt{3}>1$."
+    },
+    {
+      "id": "q5",
+      "prompt": "The sum of the first $n$ terms of an AP is $S_n = 3n^2 + 5n$. Then $a_{10}$ equals",
+      "choices": ["62","64","65","68"],
+      "answer": 0,
+      "explanation": "$a_n=S_n-S_{n-1}=6n+2$ for $n\\ge 2$, and $a_1=8$. Thus $a_{10}=6\\cdot10+2=62$."
+    },
+    {
+      "id": "q6",
+      "prompt": "If $9^x - 3^{x+1} - 54 = 0$, then $x$ equals",
+      "choices": ["1","2","3","4"],
+      "answer": 1,
+      "explanation": "Put $t=3^x>0$: $t^2-3t-54=0\\Rightarrow (t-9)(t+6)=0\\Rightarrow t=9\\Rightarrow x=2$."
+    },
+    {
+      "id": "q7",
+      "prompt": "The set of all real $a$ for which both roots of $x^2 - 2ax + (a^2 - 1) = 0$ are positive is",
+      "choices": ["$a > 1$","$a \\geq 1$","$a > 0$","$|a| > 1$"],
+      "answer": 0,
+      "explanation": "Roots are $a\\pm 1$. Need both positive: $a-1>0$ and $a+1>0$, so $a>1$."
+    },
+    {
+      "id": "q8",
+      "prompt": "Let $S = \\sum_{k=2}^{9} \\dfrac{1}{\\log_k \\pi}$. Then $S$ lies in",
+      "choices": ["(9,10)","(10,11)","(11,12)","(12,13)"],
+      "answer": 2,
+      "explanation": "$S=\\sum_{k=2}^{9}\\log_\\pi k=\\log_\\pi(2\\cdot3\\cdots9)=\\log_\\pi(9!)=\\dfrac{\\ln 9!}{\\ln\\pi}\\approx 11.18\\in(11,12)."
+    },
+    {
+      "id": "q9",
+      "prompt": "If $\\sin x + \\sin^2 x = 1$, then $\\cos^{12} x + 3\\cos^{10} x + 3\\cos^8 x + \\cos^6 x$ equals",
+      "choices": ["0","1","2","4"],
+      "answer": 1,
+      "explanation": "From $\\sin x+\\sin^2 x=1$ we get $\\cos^2 x=\\sin x$ and $\\cos^2 x(1+\\cos^2 x)=1$. Expression equals $(\\cos^2(1+\\cos^2))^3=1^3=1$."
+    },
+    {
+      "id": "q10",
+      "prompt": "The number of solutions of $\\sin 5x = \\sin 3x$ in the open interval $(0,\\pi)$ is",
+      "choices": ["4","5","6","7"],
+      "answer": 0,
+      "explanation": "$\\sin5x=\\sin3x$ gives $x=n\\pi$ or $x=\\dfrac{(2n+1)\\pi}{8}$. In $(0,\\pi)$ the four values $\\dfrac{\\pi}{8},\\dfrac{3\\pi}{8},\\dfrac{5\\pi}{8},\\dfrac{7\\pi}{8}$."
+    },
+    {
+      "id": "q11",
+      "prompt": "The range of $f(x) = \\sin^2 x + \\sin x + 1$ ($x \\in \\mathbb{R}$) is",
+      "choices": ["$[\\tfrac{3}{4},\\,3]$","$[\\tfrac{3}{4},\\,2]$","$[1,\\,3]$","$[\\tfrac{1}{4},\\,2]$"],
+      "answer": 0,
+      "explanation": "Let $u=\\sin x\\in[-1,1]$. Then $g(u)=u^2+u+1$ has minimum at $u=-1/2$ with $g=3/4$ and maximum $g(1)=3$. So range $[3/4,3]$."
+    },
+    {
+      "id": "q12",
+      "prompt": "The general solution of $\\sqrt{3}\\,\\sin x - \\cos x = \\sqrt{2}$ is",
+      "choices": ["$x = 2n\\pi + \\dfrac{5\\pi}{12},\\ n \\in \\mathbb{Z}$","$x = 2n\\pi + \\dfrac{11\\pi}{12},\\ n \\in \\mathbb{Z}$","$x = 2n\\pi + \\dfrac{5\\pi}{12}$ or $x = 2n\\pi + \\dfrac{11\\pi}{12},\\ n \\in \\mathbb{Z}$","$x = n\\pi + (-1)^n\\dfrac{\\pi}{12},\\ n \\in \\mathbb{Z}$"],
+      "answer": 2,
+      "explanation": "Rewrite: $\\sqrt{3}\\sin x-\\cos x=2\\sin(x-\\pi/6)=\\sqrt{2}$. So $\\sin(x-\\pi/6)=\\sqrt{2}/2$, giving $x=2n\\pi+5\\pi/12$ or $2n\\pi+11\\pi/12$."
+    },
+    {
+      "id": "q13",
+      "prompt": "Let $\\alpha = \\tan^{-1}\\dfrac{1}{2}$ and $\\beta = \\tan^{-1}\\dfrac{1}{3}$. Then $\\sin\\bigl(2(\\alpha+\\beta)\\bigr)$ equals",
+      "choices": ["0","\\dfrac{1}{2}","\\dfrac{\\sqrt{3}}{2}","1"],
+      "answer": 3,
+      "explanation": "Compute $\\tan(\\alpha+\\beta)=\\dfrac{1/2+1/3}{1-(1/2)(1/3)}=1$ with $\\alpha+\\beta\\in(0,\\pi/2)$ so $\\alpha+\\beta=\\pi/4$. Then $\\sin(2(\\alpha+\\beta))=\\sin(\\pi/2)=1$."
+    },
+    {
+      "id": "q14",
+      "prompt": "$\\sin^{-1}\\!\\left(\\sin\\dfrac{8\\pi}{5}\\right)$ equals",
+      "choices": ["$\\dfrac{8\\pi}{5}$","$-\\dfrac{2\\pi}{5}$","$\\dfrac{2\\pi}{5}$","$\\dfrac{3\\pi}{5}$"],
+      "answer": 1,
+      "explanation": "$\\dfrac{8\\pi}{5}=2\\pi-\\dfrac{2\\pi}{5}$ and $\\sin(2\\pi-\\theta)=-\\sin\\theta$, so principal value is $-\\dfrac{2\\pi}{5}$."
+    },
+    {
+      "id": "q15",
+      "prompt": "The value of $\\cot^{-1} 1 + \\cot^{-1} 2 + \\cot^{-1} 3$ is",
+      "choices": ["$\\dfrac{\\pi}{4}$","$\\dfrac{\\pi}{2}$","$\\pi$","$\\dfrac{3\\pi}{4}$"],
+      "answer": 1,
+      "explanation": "$\\cot^{-1}1=\\tan^{-1}1=\\pi/4$. And $\\tan^{-1}(1/2)+\\tan^{-1}(1/3)=\\pi/4$, total $\\pi/2$."
+    },
+    {
+      "id": "q16",
+      "prompt": "If $x>0$, $y>0$, $xy<1$, and $\\tan^{-1} x + \\tan^{-1} y = \\dfrac{\\pi}{4}$, then",
+      "choices": ["$x + y + xy = 1$","$x + y - xy = 1$","$x + y = 1$","$xy = 1$"],
+      "answer": 1,
+      "explanation": "Using tangent addition: $1=\\tan(\\pi/4)=\\dfrac{x+y}{1-xy}$ so $x+y-xy=1$."
+    },
+    {
+      "id": "q17",
+      "prompt": "If $\\alpha = \\sin^{-1}\\dfrac{3}{5}$ (principal value), then $\\tan\\dfrac{\\alpha}{2}$ equals",
+      "choices": ["$\\dfrac{1}{3}$","$\\dfrac{1}{2}$","$\\dfrac{3}{5}$","$\\dfrac{2}{5}$"],
+      "answer": 0,
+      "explanation": "With $\\sin\\alpha=3/5$, $\\cos\\alpha=4/5$. Then $\\tan(\\alpha/2)=\\dfrac{\\sin\\alpha}{1+\\cos\\alpha}=(3/5)/(1+4/5)=1/3$."
+    },
+    {
+      "id": "q18",
+      "prompt": "The domain of $f(x) = \\sqrt{\\dfrac{x-1}{2-x}} + \\arcsin\\!\\left(\\dfrac{2x}{1+x^2}\\right) + \\log(4-x)$ is",
+      "choices": ["$[1,2)$","$(1,2)$","$[1,4)$","$[1,2]$"],
+      "answer": 0,
+      "explanation": "Require (x-1)/(2-x)\\ge0 => 1\\le x<2; arcsin argument in [-1,1] always true; log(4-x) needs x<4. Intersection $[1,2)$."
+    },
+    {
+      "id": "q19",
+      "prompt": "The range of $f(x) = \\dfrac{x^2 - x + 1}{x^2 + x + 1}$ ($x \\in \\mathbb{R}$) is",
+      "choices": ["$[\\dfrac{1}{3},\\,3]$","$(0,\\,1]$","$[\\dfrac{1}{3},\\,1)$","$[1,\\,3]$"],
+      "answer": 0,
+      "explanation": "Set y=f(x) and require real x; discriminant condition yields $1/3\\le y\\le 3$."
+    },
+    {
+      "id": "q20",
+      "prompt": "The equation $[\\,x\\,]^2 - 3[\\,x\\,] - 4 = 0$ has",
+      "choices": ["exactly one real solution","exactly two real solutions","infinitely many real solutions","no real solution"],
+      "answer": 2,
+      "explanation": "Integer part [x] solves t^2-3t-4=0 => t=4 or t=-1. So x\\in[4,5)\\cup[-1,0) — infinitely many real x."
+    },
+    {
+      "id": "q21",
+      "prompt": "Let $f(x) = \\sqrt{4-x}$ and $g(x) = x^2 - 5x + 6$. The domain of $f \\circ g$ is",
+      "choices": ["\\mathbb{R}","$[\\dfrac{5-\\sqrt{17}}{2},\\,\\dfrac{5+\\sqrt{17}}{2}]$","$[1,4]$","$(-\\infty,4]$"],
+      "answer": 1,
+      "explanation": "Need 4-g(x)\\ge0 => x^2-5x+2\\le0 => x\\in[ (5-\\sqrt{17})/2 , (5+\\sqrt{17})/2 ]."
+    },
+    {
+      "id": "q22",
+      "prompt": "Let f(x) defined piecewise: x+1 (x<0), x^2 (0\\le x \\le 2), 5-x (x>2). Which statement is true?",
+      "choices": ["f is one-one and onto \\mathbb{R}","f is one-one but not onto \\mathbb{R}","f is not one-one, and ran(f) = (-\\infty,4]","f is not one-one, and ran(f) = \\mathbb{R}"],
+      "answer": 2,
+      "explanation": "f is not one-one (e.g. f(-1)=0=f(0)). Range is (-\\infty,4]."
+    },
+    {
+      "id": "q23",
+      "prompt": "The number of onto functions from $A=\\{1,2,3,4\\}$ to $B=\\{a,b,c\\}$ is",
+      "choices": ["36","33","81","45"],
+      "answer": 0,
+      "explanation": "By inclusion–exclusion: $3^4-\\binom{3}{1}2^4+\\binom{3}{2}1^4=81-48+3=36$."
+    },
+    {
+      "id": "q24",
+      "prompt": "Which of the following functions is periodic?",
+      "choices": ["$\\sin x + \\sin(\\sqrt{2}\\,x)$","$\\{x\\} + \\{x/2\\}$","$\\sin(x^2)$","$\\cos(x^2)$"],
+      "answer": 1,
+      "explanation": "Fractional part {x} has period 1 and {x/2} has period 2, so sum has period 2. The others are not periodic."
+    },
+    {
+      "id": "q25",
+      "prompt": "Let $f(x) = \\dfrac{e^x - 1}{e^x + 1}$. Then $f^{-1}(x)$ equals",
+      "choices": ["$\\dfrac{1}{2}\\ln\\dfrac{1+x}{1-x},\\quad |x|<1$","$\\ln\\dfrac{1+x}{1-x},\\quad |x|<1$","$\\dfrac{1}{2}\\ln\\dfrac{1-x}{1+x},\\quad |x|<1$","$\\ln(1+x),\\quad x>-1$"],
+      "answer": 0,
+      "explanation": "Solve y=(e^x-1)/(e^x+1): e^x=(1+y)/(1-y), so x=\\dfrac{1}{2}\\ln\\dfrac{1+y}{1-y} with |y|<1."
+    }
+  ]
+}

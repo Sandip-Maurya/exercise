@@ -1,0 +1,162 @@
+{
+  "id": "trigonometry",
+  "title": "Trigonometry",
+  "description": "Angles, waves, and identities — used in signals, robotics, and graphics.",
+  "questions": [
+    {
+      "id": "trig1",
+      "prompt": "$\\sin 90^\\circ =$",
+      "choices": ["$0$", "$\\dfrac{1}{2}$", "$1$", "$-1$"],
+      "answer": 2,
+      "explanation": "On the unit circle, $90^\\circ$ (or $\\dfrac{\\pi}{2}$ radians) is the point $(0,1)$.\n\nThe $y$-coordinate is $\\sin 90^\\circ = 1$."
+    },
+    {
+      "id": "trig2",
+      "prompt": "$\\cos 0 =$",
+      "choices": ["$0$", "$1$", "$-1$", "$\\dfrac{1}{2}$"],
+      "answer": 1,
+      "explanation": "At angle $0$, the unit-circle point is $(1,0)$.\n\nSo $\\cos 0 = 1$ and $\\sin 0 = 0$."
+    },
+    {
+      "id": "trig3",
+      "prompt": "$\\tan\\theta =$",
+      "choices": [
+        "$\\dfrac{\\cos\\theta}{\\sin\\theta}$",
+        "$\\dfrac{\\sin\\theta}{\\cos\\theta}$",
+        "$\\sin\\theta \\cos\\theta$",
+        "$\\sin\\theta + \\cos\\theta$"
+      ],
+      "answer": 1,
+      "explanation": "By definition $\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta}$, wherever $\\cos\\theta \\neq 0$."
+    },
+    {
+      "id": "trig4",
+      "prompt": "Convert $180^\\circ$ to radians:",
+      "choices": [
+        "$\\dfrac{\\pi}{2}$",
+        "$\\pi$",
+        "$2\\pi$",
+        "$\\dfrac{\\pi}{4}$"
+      ],
+      "answer": 1,
+      "explanation": "$$\\text{radians} = \\text{degrees} \\times \\dfrac{\\pi}{180}.$$\n\nSo $180^\\circ = \\pi$ radians. A full turn is $2\\pi$."
+    },
+    {
+      "id": "trig5",
+      "prompt": "Convert $\\dfrac{\\pi}{3}$ radians to degrees:",
+      "choices": ["$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$90^\\circ$"],
+      "answer": 2,
+      "explanation": "$$\\text{degrees} = \\text{radians} \\times \\dfrac{180}{\\pi} = \\dfrac{\\pi}{3} \\cdot \\dfrac{180}{\\pi} = 60^\\circ.$$"
+    },
+    {
+      "id": "trig6",
+      "prompt": "Pythagorean identity: $\\sin^2\\theta + \\cos^2\\theta =$",
+      "choices": ["$0$", "$1$", "$\\tan^2\\theta$", "$2$"],
+      "answer": 1,
+      "explanation": "From the unit circle $x^2 + y^2 = 1$ with $x=\\cos\\theta$, $y=\\sin\\theta$:\n\n$$\\sin^2\\theta + \\cos^2\\theta = 1.$$"
+    },
+    {
+      "id": "trig7",
+      "prompt": "$\\sin(90^\\circ - \\theta) =$",
+      "choices": [
+        "$\\sin\\theta$",
+        "$\\cos\\theta$",
+        "$-\\sin\\theta$",
+        "$\\tan\\theta$"
+      ],
+      "answer": 1,
+      "explanation": "Cofunction identity: $\\sin(90^\\circ - \\theta) = \\cos\\theta$.\n\nSimilarly $\\cos(90^\\circ - \\theta) = \\sin\\theta$."
+    },
+    {
+      "id": "trig8",
+      "prompt": "In a right triangle, $\\sin\\theta =$",
+      "choices": [
+        "$\\dfrac{\\text{adjacent}}{\\text{hypotenuse}}$",
+        "$\\dfrac{\\text{opposite}}{\\text{hypotenuse}}$",
+        "$\\dfrac{\\text{opposite}}{\\text{adjacent}}$",
+        "$\\dfrac{\\text{hypotenuse}}{\\text{opposite}}$"
+      ],
+      "answer": 1,
+      "explanation": "SOH-CAH-TOA: $\\sin = \\dfrac{\\text{opposite}}{\\text{hypotenuse}}$, $\\cos = \\dfrac{\\text{adjacent}}{\\text{hypotenuse}}$, $\\tan = \\dfrac{\\text{opposite}}{\\text{adjacent}}$."
+    },
+    {
+      "id": "trig9",
+      "prompt": "Amplitude of $y = 3\\sin(2x)$ is:",
+      "choices": ["$1$", "$2$", "$3$", "$6$"],
+      "answer": 2,
+      "explanation": "For $y = A\\sin(Bx)$, the amplitude is $|A|$.\n\nHere $|A| = 3$. The factor $2$ affects frequency/period, not amplitude."
+    },
+    {
+      "id": "trig10",
+      "prompt": "Period of $y = \\sin(2x)$ is:",
+      "choices": [
+        "$2\\pi$",
+        "$\\pi$",
+        "$\\dfrac{\\pi}{2}$",
+        "$4\\pi$"
+      ],
+      "answer": 1,
+      "explanation": "Standard sine has period $2\\pi$. For $\\sin(Bx)$, period is $\\dfrac{2\\pi}{|B|}$.\n\nWith $B = 2$: period $= \\dfrac{2\\pi}{2} = \\pi$."
+    },
+    {
+      "id": "trig11",
+      "prompt": "$\\sin(2\\theta) =$",
+      "choices": [
+        "$2\\sin\\theta$",
+        "$2\\sin\\theta\\cos\\theta$",
+        "$\\sin^2\\theta$",
+        "$\\cos^2\\theta - \\sin^2\\theta$"
+      ],
+      "answer": 1,
+      "explanation": "Double-angle formula: $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.\n\n(Note $\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta$.)"
+    },
+    {
+      "id": "trig12",
+      "prompt": "$\\cos(a - b) =$",
+      "choices": [
+        "$\\cos a \\cos b + \\sin a \\sin b$",
+        "$\\cos a \\cos b - \\sin a \\sin b$",
+        "$\\sin a \\cos b$",
+        "$\\cos a - \\cos b$"
+      ],
+      "answer": 0,
+      "explanation": "Angle difference: $\\cos(a-b) = \\cos a \\cos b + \\sin a \\sin b$.\n\nFor a sum, the middle sign flips: $\\cos(a+b) = \\cos a \\cos b - \\sin a \\sin b$."
+    },
+    {
+      "id": "trig13",
+      "prompt": "Law of cosines: $c^2 =$",
+      "choices": [
+        "$a^2 + b^2$",
+        "$a^2 + b^2 - 2ab\\cos C$",
+        "$a^2 + b^2 + 2ab\\cos C$",
+        "$2ab\\cos C$"
+      ],
+      "answer": 1,
+      "explanation": "For any triangle with angle $C$ opposite side $c$: $$c^2 = a^2 + b^2 - 2ab\\cos C.$$\n\nWhen $C = 90^\\circ$, $\\cos C = 0$ and this becomes Pythagoras."
+    },
+    {
+      "id": "trig14",
+      "prompt": "As a wave, $\\sin x$ has zeros at:",
+      "choices": [
+        "$x = n\\pi$ for integers $n$",
+        "$x = \\dfrac{\\pi}{2} + n\\pi$",
+        "$x = 2n\\pi$ only",
+        "$x = 1$"
+      ],
+      "answer": 0,
+      "explanation": "$\\sin x = 0$ at integer multiples of $\\pi$: $x = 0, \\pm\\pi, \\pm 2\\pi, \\ldots$\n\nCosine is zero at $\\dfrac{\\pi}{2} + n\\pi$."
+    },
+    {
+      "id": "trig15",
+      "prompt": "In 2D rotation by $\\theta$, the point $(x,y)$ maps using matrix:",
+      "choices": [
+        "$\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$",
+        "$\\begin{pmatrix} \\sin\\theta & \\cos\\theta \\\\ \\cos\\theta & \\sin\\theta \\end{pmatrix}$",
+        "$\\begin{pmatrix} 1 & \\theta \\\\ 0 & 1 \\end{pmatrix}$",
+        "$\\begin{pmatrix} \\theta & 0 \\\\ 0 & \\theta \\end{pmatrix}$"
+      ],
+      "answer": 0,
+      "explanation": "Standard rotation matrix (counterclockwise): $$R(\\theta) = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}.$$\n\nThis is fundamental in computer graphics and robotics."
+    }
+  ]
+}

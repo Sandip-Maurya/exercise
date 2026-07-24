@@ -1,0 +1,212 @@
+{
+  "id": "advanced-math-mcq",
+  "title": "Advanced Math MCQ",
+  "description": "Difficult mixed MCQs — algebra through differential equations (JEE Advanced / early university calculus).",
+  "questions": [
+    {
+      "id": "amm1",
+      "prompt": "If $\\log_2(x-1) + \\log_2(x+1) = 3$, then the value of $x$ is",
+      "choices": ["$1$", "$3$", "$\\sqrt{17}$", "$5$"],
+      "answer": 1,
+      "explanation": "Use $\\log a + \\log b = \\log(ab)$:\n\n$$\\log_2\\big((x-1)(x+1)\\big) = 3 \\implies (x-1)(x+1) = 2^3 = 8.$$\n\nSo $x^2 - 1 = 8$, hence $x^2 = 9$ and $x = 3$ (domain requires $x > 1$).\n\nCheck: $\\log_2 2 + \\log_2 4 = 1 + 2 = 3$."
+    },
+    {
+      "id": "amm2",
+      "prompt": "The infinite geometric series $\\displaystyle\\sum_{n=0}^{\\infty} 15\\left(\\dfrac{1}{3}\\right)^n$ converges to",
+      "choices": ["$15$", "$22.5$", "$30$", "Diverges"],
+      "answer": 1,
+      "explanation": "First term $a = 15$, common ratio $r = \\dfrac{1}{3}$ with $|r| < 1$, so\n\n$$\\sum_{n=0}^{\\infty} ar^n = \\dfrac{a}{1-r} = \\dfrac{15}{1 - \\tfrac{1}{3}} = \\dfrac{15}{\\tfrac{2}{3}} = \\dfrac{45}{2} = 22.5.$$"
+    },
+    {
+      "id": "amm3",
+      "prompt": "If $\\sin\\theta + \\cos\\theta = \\dfrac{1}{3}$, then $\\sin 2\\theta =$",
+      "choices": [
+        "$-\\dfrac{7}{9}$",
+        "$\\dfrac{7}{9}$",
+        "$\\dfrac{8}{9}$",
+        "$-\\dfrac{8}{9}$"
+      ],
+      "answer": 3,
+      "explanation": "Square both sides:\n\n$$(\\sin\\theta + \\cos\\theta)^2 = \\dfrac{1}{9} \\implies \\sin^2\\theta + \\cos^2\\theta + 2\\sin\\theta\\cos\\theta = \\dfrac{1}{9}.$$\n\nSo $1 + \\sin 2\\theta = \\dfrac{1}{9}$, hence $\\sin 2\\theta = -\\dfrac{8}{9}$."
+    },
+    {
+      "id": "amm4",
+      "prompt": "Evaluate $\\tan\\!\\left(2\\tan^{-1}\\dfrac{1}{3}\\right)$.",
+      "choices": [
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{3}{5}$",
+        "$\\dfrac{4}{5}$",
+        "$\\dfrac{5}{8}$"
+      ],
+      "answer": 0,
+      "explanation": "Double-angle formula: $\\tan 2\\alpha = \\dfrac{2\\tan\\alpha}{1 - \\tan^2\\alpha}$ with $\\tan\\alpha = \\dfrac{1}{3}$:\n\n$$\\dfrac{2\\cdot\\tfrac{1}{3}}{1 - \\left(\\tfrac{1}{3}\\right)^2} = \\dfrac{\\tfrac{2}{3}}{\\tfrac{8}{9}} = \\dfrac{2}{3}\\cdot\\dfrac{9}{8} = \\dfrac{3}{4}.$$"
+    },
+    {
+      "id": "amm5",
+      "prompt": "Let $f(x) = \\dfrac{x-2}{x+1}$. Then $f^{-1}(x) =$",
+      "choices": [
+        "$\\dfrac{x+2}{1-x}$",
+        "$\\dfrac{x+1}{x-2}$",
+        "$\\dfrac{x-1}{x+2}$",
+        "$\\dfrac{2-x}{x+1}$"
+      ],
+      "answer": 0,
+      "explanation": "Set $y = \\dfrac{x-2}{x+1}$ and solve for $x$:\n\n$$y(x+1) = x-2 \\implies yx + y = x - 2 \\implies y + 2 = x - yx = x(1-y).$$\n\nThus $x = \\dfrac{y+2}{1-y}$. Swapping variables gives $f^{-1}(x) = \\dfrac{x+2}{1-x}$."
+    },
+    {
+      "id": "amm6",
+      "prompt": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\dfrac{e^{3x} - 1 - 3x}{x^2}$.",
+      "choices": ["$3$", "$\\dfrac{9}{2}$", "$9$", "$6$"],
+      "answer": 1,
+      "explanation": "Taylor: $e^{3x} = 1 + 3x + \\dfrac{(3x)^2}{2!} + O(x^3) = 1 + 3x + \\dfrac{9x^2}{2} + O(x^3)$.\n\nNumerator is $\\dfrac{9x^2}{2} + O(x^3)$, so the limit is $\\dfrac{9}{2}$.\n\n(Alternatively, L'Hôpital twice on the $0/0$ form.)"
+    },
+    {
+      "id": "amm7",
+      "prompt": "$\\displaystyle\\lim_{x \\to 0^-} \\dfrac{|x|}{x}$ equals",
+      "choices": ["$1$", "$-1$", "$0$", "Does not exist"],
+      "answer": 1,
+      "explanation": "For $x < 0$, $|x| = -x$, so $\\dfrac{|x|}{x} = \\dfrac{-x}{x} = -1$.\n\nThe left-hand limit is therefore $-1$."
+    },
+    {
+      "id": "amm8",
+      "prompt": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\ln(1+x) - x}{x^2}$.",
+      "choices": ["$-\\dfrac{1}{2}$", "$\\dfrac{1}{2}$", "$-1$", "$1$"],
+      "answer": 0,
+      "explanation": "Taylor: $\\ln(1+x) = x - \\dfrac{x^2}{2} + O(x^3)$.\n\nSo $\\ln(1+x) - x = -\\dfrac{x^2}{2} + O(x^3)$, and the limit is $-\\dfrac{1}{2}$."
+    },
+    {
+      "id": "amm9",
+      "prompt": "For what value of $k$ is\n\n$$f(x) = \\begin{cases} \\dfrac{x^2-9}{x-3}, & x \\neq 3 \\\\ k, & x = 3 \\end{cases}$$\n\ncontinuous?",
+      "choices": ["$3$", "$6$", "$9$", "$12$"],
+      "answer": 1,
+      "explanation": "For $x \\neq 3$, $\\dfrac{x^2-9}{x-3} = x+3$.\n\nContinuity at $x=3$ needs $k = \\lim_{x\\to 3}(x+3) = 6$."
+    },
+    {
+      "id": "amm10",
+      "prompt": "Which condition is sufficient to guarantee that $f(x) = 0$ has a solution in $(a,b)$?",
+      "choices": [
+        "$f'(x)$ exists",
+        "$f(a) = f(b)$",
+        "$f$ continuous and $f(a)f(b) < 0$",
+        "$f''(x) > 0$"
+      ],
+      "answer": 2,
+      "explanation": "By the Intermediate Value Theorem: if $f$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then $f$ has a root in $(a,b)$."
+    },
+    {
+      "id": "amm11",
+      "prompt": "If $y = \\sin(x^2 e^x)$, then $\\dfrac{dy}{dx}$ equals",
+      "choices": [
+        "$\\cos(x^2 e^x)\\,(2x + x^2)e^x$",
+        "$\\sin(x^2 e^x)\\,(2x + x^2)e^x$",
+        "$\\cos(x^2 e^x)\\,(2+x)e^x$",
+        "$\\cos(x^2)\\,e^x$"
+      ],
+      "answer": 0,
+      "explanation": "Chain rule: $\\dfrac{dy}{dx} = \\cos(x^2 e^x) \\cdot \\dfrac{d}{dx}(x^2 e^x)$.\n\nProduct rule: $\\dfrac{d}{dx}(x^2 e^x) = 2x e^x + x^2 e^x = (2x + x^2)e^x$."
+    },
+    {
+      "id": "amm12",
+      "prompt": "If $x^2 + y^2 = 25$, then $\\dfrac{dy}{dx} =$",
+      "choices": [
+        "$\\dfrac{y}{x}$",
+        "$-\\dfrac{y}{x}$",
+        "$-\\dfrac{x}{y}$",
+        "$\\dfrac{x}{y}$"
+      ],
+      "answer": 2,
+      "explanation": "Differentiate implicitly: $2x + 2y\\,y' = 0$, so $y' = -\\dfrac{x}{y}$ (where $y \\neq 0$)."
+    },
+    {
+      "id": "amm13",
+      "prompt": "The coefficient of $x^3$ in the Maclaurin expansion of $e^x$ is",
+      "choices": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{2}$",
+        "$1$"
+      ],
+      "answer": 0,
+      "explanation": "$e^x = \\displaystyle\\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$, so the coefficient of $x^3$ is $\\dfrac{1}{3!} = \\dfrac{1}{6}$."
+    },
+    {
+      "id": "amm14",
+      "prompt": "Evaluate $\\displaystyle\\int x e^x\\,dx$.",
+      "choices": [
+        "$e^x(x+1)+C$",
+        "$e^x(x-1)+C$",
+        "$x e^x + C$",
+        "$e^x + C$"
+      ],
+      "answer": 1,
+      "explanation": "Integration by parts with $u = x$, $dv = e^x\\,dx$:\n\n$$\\int x e^x\\,dx = x e^x - \\int e^x\\,dx = x e^x - e^x + C = e^x(x-1)+C.$$"
+    },
+    {
+      "id": "amm15",
+      "prompt": "Evaluate $\\displaystyle\\int \\sin^2 x\\,dx$.",
+      "choices": [
+        "$\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C$",
+        "$\\dfrac{x}{2} + \\dfrac{\\sin 2x}{2} + C$",
+        "$-\\cos x + C$",
+        "$\\dfrac{1}{2}\\sin 2x + C$"
+      ],
+      "answer": 0,
+      "explanation": "Use $\\sin^2 x = \\dfrac{1 - \\cos 2x}{2}$:\n\n$$\\int \\sin^2 x\\,dx = \\int \\dfrac{1 - \\cos 2x}{2}\\,dx = \\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C.$$"
+    },
+    {
+      "id": "amm16",
+      "prompt": "Evaluate $\\displaystyle\\int \\dfrac{1}{x^2 - 1}\\,dx$.",
+      "choices": [
+        "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x-1}{x+1}\\right| + C$",
+        "$\\ln|x^2 - 1| + C$",
+        "$\\dfrac{1}{x-1} + C$",
+        "$\\tan^{-1} x + C$"
+      ],
+      "answer": 0,
+      "explanation": "Partial fractions: $\\dfrac{1}{x^2-1} = \\dfrac{1/2}{x-1} - \\dfrac{1/2}{x+1}$.\n\nIntegrating gives $\\dfrac{1}{2}\\ln|x-1| - \\dfrac{1}{2}\\ln|x+1| + C = \\dfrac{1}{2}\\ln\\left|\\dfrac{x-1}{x+1}\\right| + C$."
+    },
+    {
+      "id": "amm17",
+      "prompt": "If $F(x) = \\displaystyle\\int_1^{x^2} \\cos t\\,dt$, then $F'(x) =$",
+      "choices": [
+        "$2x\\cos(x^2)$",
+        "$\\cos(x^2)$",
+        "$2x\\sin(x^2)$",
+        "$\\cos x$"
+      ],
+      "answer": 0,
+      "explanation": "Fundamental Theorem of Calculus with chain rule: if $F(x) = \\int_a^{g(x)} f(t)\\,dt$, then $F'(x) = f(g(x))\\,g'(x)$.\n\nHere $F'(x) = \\cos(x^2) \\cdot 2x$."
+    },
+    {
+      "id": "amm18",
+      "prompt": "Determine $\\displaystyle\\int_1^{\\infty} \\dfrac{1}{x^2}\\,dx$.",
+      "choices": ["$0$", "$1$", "Diverges", "$\\infty$"],
+      "answer": 1,
+      "explanation": "$$\\int_1^{\\infty} x^{-2}\\,dx = \\lim_{b\\to\\infty}\\left[-\\dfrac{1}{x}\\right]_1^b = \\lim_{b\\to\\infty}\\left(-\\dfrac{1}{b} + 1\\right) = 1.$$"
+    },
+    {
+      "id": "amm19",
+      "prompt": "Area enclosed by $y = x$ and $y = x^2$ is",
+      "choices": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{2}$",
+        "$1$"
+      ],
+      "answer": 0,
+      "explanation": "Curves meet when $x = x^2$, so $x = 0$ or $x = 1$. For $x \\in [0,1]$, $x \\ge x^2$, so\n\n$$\\text{Area} = \\int_0^1 (x - x^2)\\,dx = \\left[\\dfrac{x^2}{2} - \\dfrac{x^3}{3}\\right]_0^1 = \\dfrac{1}{2} - \\dfrac{1}{3} = \\dfrac{1}{6}.$$"
+    },
+    {
+      "id": "amm20",
+      "prompt": "Solve $\\dfrac{dy}{dx} = 3y$, $y(0) = 4$.",
+      "choices": [
+        "$y = 4e^{3x}$",
+        "$y = 3e^{4x}$",
+        "$y = e^{3x}$",
+        "$y = 12e^{x}$"
+      ],
+      "answer": 0,
+      "explanation": "Separable: $\\dfrac{dy}{y} = 3\\,dx$ gives $\\ln|y| = 3x + C$, so $y = Ae^{3x}$.\n\n$y(0) = 4$ implies $A = 4$, hence $y = 4e^{3x}$."
+    }
+  ]
+}

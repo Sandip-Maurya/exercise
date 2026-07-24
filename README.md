@@ -11,7 +11,7 @@ Each set offers two modes:
 | | Practice | Quiz |
 |--|----------|------|
 | Feedback | After each question | After you submit (or time runs out) |
-| Timer | None | `90 × number of questions` seconds |
+| Timer | None | `120 × number of questions` seconds |
 | Navigation | Forward only | Previous / Next and a question strip |
 | Unanswered | N/A (must answer to continue) | Count as incorrect |
 

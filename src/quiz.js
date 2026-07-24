@@ -1,4 +1,4 @@
-export const QUIZ_SECONDS_PER_QUESTION = 90
+export const QUIZ_SECONDS_PER_QUESTION = 120
 
 export function quizDurationSeconds(questionCount) {
   return QUIZ_SECONDS_PER_QUESTION * questionCount

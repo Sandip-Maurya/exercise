@@ -1,0 +1,287 @@
+{
+  "id": "advanced-calculus-mcq",
+  "title": "Advanced Calculus MCQ",
+  "description": "Harder mixed MCQs — Taylor limits, FTC, volumes, DEs, and Riemann sums (honors calculus / olympiad warm-up).",
+  "questions": [
+    {
+      "id": "acm1",
+      "prompt": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\ln(1+\\sin x) - \\sin(\\ln(1+x))}{x^3}$.",
+      "choices": [
+        "$\\dfrac{1}{3}$",
+        "$-\\dfrac{1}{6}$",
+        "$\\dfrac{1}{2}$",
+        "$0$"
+      ],
+      "answer": 1,
+      "explanation": "Use Taylor expansions about $x = 0$:\n\n$$\\sin x = x - \\dfrac{x^3}{6} + O(x^5), \\quad \\ln(1+x) = x - \\dfrac{x^2}{2} + \\dfrac{x^3}{3} + O(x^4).$$\n\nExpanding the numerator through order $x^3$ yields $-\\dfrac{x^3}{6} + o(x^3)$, so the limit is $-\\dfrac{1}{6}$."
+    },
+    {
+      "id": "acm2",
+      "prompt": "Let $f(x) = \\dfrac{x+1}{x-1}$ and $g(x) = \\sqrt{x^2 - 4}$. The domain of $(f \\circ g)(x)$ is",
+      "choices": [
+        "$(-\\infty,-2]\\cup[2,\\infty)$",
+        "$(-\\infty,-\\sqrt{5})\\cup(\\sqrt{5},\\infty)$",
+        "$(-\\infty,-\\sqrt{5}]\\cup[\\sqrt{5},\\infty)$",
+        "$(-\\infty,-2)\\cup(2,\\infty)$"
+      ],
+      "answer": 0,
+      "explanation": "$g(x)$ requires $x^2 - 4 \\ge 0$, i.e. $|x| \\ge 2$.\n\nThen $f(g(x))$ needs $g(x) \\neq 1$, so $\\sqrt{x^2-4} \\neq 1 \\implies x \\neq \\pm\\sqrt{5}$. Since $\\sqrt{5} > 2$, the natural domain among the listed options is $(-\\infty,-2]\\cup[2,\\infty)$ (with the two points $\\pm\\sqrt{5}$ removed in the exact domain)."
+    },
+    {
+      "id": "acm3",
+      "prompt": "Evaluate $\\sin\\!\\left(2\\cos^{-1}\\dfrac{3}{5}\\right)$.",
+      "choices": [
+        "$\\dfrac{24}{25}$",
+        "$\\dfrac{12}{25}$",
+        "$\\dfrac{7}{25}$",
+        "$\\dfrac{4}{5}$"
+      ],
+      "answer": 0,
+      "explanation": "Let $\\theta = \\cos^{-1}\\dfrac{3}{5}$, so $\\cos\\theta = \\dfrac{3}{5}$ and $\\sin\\theta = \\dfrac{4}{5}$ (principal value).\n\nThen $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta = 2\\cdot\\dfrac{4}{5}\\cdot\\dfrac{3}{5} = \\dfrac{24}{25}$."
+    },
+    {
+      "id": "acm4",
+      "prompt": "Determine $k$ such that\n\n$$f(x) = \\begin{cases} \\dfrac{\\sin(kx)}{x}, & x \\neq 0 \\\\ 5, & x = 0 \\end{cases}$$\n\nis continuous.",
+      "choices": ["$1$", "$5$", "$\\pi$", "Cannot exist"],
+      "answer": 1,
+      "explanation": "$$\\lim_{x\\to 0}\\dfrac{\\sin(kx)}{x} = \\lim_{x\\to 0} k\\cdot\\dfrac{\\sin(kx)}{kx} = k.$$\n\nContinuity at $0$ requires $k = 5$."
+    },
+    {
+      "id": "acm5",
+      "prompt": "Evaluate $\\displaystyle\\lim_{x \\to 0} (1+2x)^{1/\\sin x}$.",
+      "choices": ["$e^2$", "$e$", "$e^{1/2}$", "$1$"],
+      "answer": 0,
+      "explanation": "Write $y = (1+2x)^{1/\\sin x}$. Then\n\n$$\\ln y = \\dfrac{\\ln(1+2x)}{\\sin x} = \\dfrac{\\ln(1+2x)}{2x}\\cdot\\dfrac{2x}{\\sin x} \\to 1 \\cdot 2 = 2$$\n\nas $x \\to 0$. Hence $y \\to e^2$."
+    },
+    {
+      "id": "acm6",
+      "prompt": "If $z = x^y$, then $\\dfrac{\\partial z}{\\partial y} =$",
+      "choices": [
+        "$x^{y-1}$",
+        "$x^y \\ln x$",
+        "$y x^{y-1}$",
+        "$\\ln(y)\\,x^y$"
+      ],
+      "answer": 1,
+      "explanation": "Write $z = e^{y\\ln x}$ (for $x > 0$). Differentiating with respect to $y$:\n\n$$\\dfrac{\\partial z}{\\partial y} = e^{y\\ln x}\\cdot\\ln x = x^y \\ln x.$$"
+    },
+    {
+      "id": "acm7",
+      "prompt": "If $x^3 + y^3 = 6xy$, then $\\dfrac{dy}{dx} =$",
+      "choices": [
+        "$\\dfrac{2y - x^2}{y^2 - 2x}$",
+        "$\\dfrac{x^2 - 2y}{2x - y^2}$",
+        "$\\dfrac{2x - y^2}{2y - x^2}$",
+        "$\\dfrac{2x - y^2}{x^2 - 2y}$"
+      ],
+      "answer": 0,
+      "explanation": "Differentiate: $3x^2 + 3y^2 y' = 6y + 6x y'$.\n\nRearrange: $3y^2 y' - 6x y' = 6y - 3x^2$, so\n\n$$y'(y^2 - 2x) = 2y - x^2 \\implies y' = \\dfrac{2y - x^2}{y^2 - 2x}.$$"
+    },
+    {
+      "id": "acm8",
+      "prompt": "The function $f(x) = x^4 - 4x^2$ has",
+      "choices": [
+        "one local minimum",
+        "two local maxima",
+        "two local minima and one local maximum",
+        "three local minima"
+      ],
+      "answer": 2,
+      "explanation": "$f'(x) = 4x^3 - 8x = 4x(x^2-2)$. Critical points: $x = 0,\\,\\pm\\sqrt{2}$.\n\n$f''(x) = 12x^2 - 8$: $f''(0) < 0$ (local max), $f''(\\pm\\sqrt{2}) > 0$ (local minima)."
+    },
+    {
+      "id": "acm9",
+      "prompt": "Which function does **not** satisfy the hypotheses of Rolle's theorem on $[-1,1]$?",
+      "choices": [
+        "$x^2 - 1$",
+        "$|x| - 1$",
+        "$x^4 - 1$",
+        "$\\cos(\\pi x) + 1$"
+      ],
+      "answer": 1,
+      "explanation": "Rolle's theorem needs continuity on $[-1,1]$ and differentiability on $(-1,1)$.\n\n$|x|-1$ is not differentiable at $x = 0$, so it fails the hypotheses (even though $f(-1) = f(1) = 0$)."
+    },
+    {
+      "id": "acm10",
+      "prompt": "The coefficient of $x^5$ in the Maclaurin expansion of $\\sin x$ is",
+      "choices": [
+        "$\\dfrac{1}{120}$",
+        "$-\\dfrac{1}{120}$",
+        "$-\\dfrac{1}{60}$",
+        "$\\dfrac{1}{60}$"
+      ],
+      "answer": 1,
+      "explanation": "$\\sin x = x - \\dfrac{x^3}{3!} + \\dfrac{x^5}{5!} - \\cdots$, so the coefficient of $x^5$ is $\\dfrac{1}{5!} = \\dfrac{1}{120}$ with a minus from the alternating pattern: $-\\dfrac{1}{120}$."
+    },
+    {
+      "id": "acm11",
+      "prompt": "Evaluate $\\displaystyle\\int \\dfrac{\\ln x}{x^2}\\,dx$.",
+      "choices": [
+        "$-\\dfrac{\\ln x + 1}{x} + C$",
+        "$\\dfrac{\\ln x}{x} + C$",
+        "$-\\dfrac{\\ln x}{x} + C$",
+        "$\\dfrac{1}{x} + C$"
+      ],
+      "answer": 0,
+      "explanation": "Integration by parts: $u = \\ln x$, $dv = x^{-2}\\,dx$ gives $du = \\dfrac{dx}{x}$, $v = -\\dfrac{1}{x}$.\n\n$$\\int \\dfrac{\\ln x}{x^2}\\,dx = -\\dfrac{\\ln x}{x} - \\int\\left(-\\dfrac{1}{x}\\right)\\dfrac{1}{x}\\,dx = -\\dfrac{\\ln x}{x} - \\dfrac{1}{x} + C = -\\dfrac{\\ln x + 1}{x} + C.$$"
+    },
+    {
+      "id": "acm12",
+      "prompt": "Evaluate $\\displaystyle\\int \\dfrac{x}{\\sqrt{1 + x^4}}\\,dx$.",
+      "choices": [
+        "$\\dfrac{1}{2}\\sinh^{-1}(x^2) + C$",
+        "$\\sqrt{1 + x^4} + C$",
+        "$\\ln(1 + x^4) + C$",
+        "$\\tan^{-1}(x^2) + C$"
+      ],
+      "answer": 0,
+      "explanation": "Substitute $u = x^2$, $du = 2x\\,dx$:\n\n$$\\int \\dfrac{x}{\\sqrt{1+x^4}}\\,dx = \\dfrac{1}{2}\\int \\dfrac{du}{\\sqrt{1+u^2}} = \\dfrac{1}{2}\\sinh^{-1} u + C = \\dfrac{1}{2}\\sinh^{-1}(x^2) + C.$$"
+    },
+    {
+      "id": "acm13",
+      "prompt": "Evaluate $\\displaystyle\\int \\dfrac{x+2}{x^2 + x - 2}\\,dx$.",
+      "choices": [
+        "$\\ln|x-1| + C$",
+        "$\\ln|x+2| + C$",
+        "$\\ln|x-1| + \\ln|x+2| + C$",
+        "$2\\ln|x-1| - \\ln|x+2| + C$"
+      ],
+      "answer": 0,
+      "explanation": "Factor: $x^2 + x - 2 = (x-1)(x+2)$.\n\nNote $\\dfrac{d}{dx}(x^2+x-2) = 2x+1$, but here the numerator is exactly half of that only after rewriting.\n\nPartial fractions: $\\dfrac{x+2}{(x-1)(x+2)} = \\dfrac{1}{x-1}$ for $x \\neq -2$, so the integral is $\\ln|x-1| + C$."
+    },
+    {
+      "id": "acm14",
+      "prompt": "If $F(x) = \\displaystyle\\int_x^{x^2} e^{t^2}\\,dt$, then $F'(x) =$",
+      "choices": [
+        "$2x e^{x^4} - e^{x^2}$",
+        "$e^{x^4} - e^{x^2}$",
+        "$2x e^{x^2} - e^{x^4}$",
+        "$2x e^{x^4}$"
+      ],
+      "answer": 0,
+      "explanation": "Leibniz rule: $F'(x) = e^{(x^2)^2}\\cdot 2x - e^{x^2}\\cdot 1 = 2x e^{x^4} - e^{x^2}$."
+    },
+    {
+      "id": "acm15",
+      "prompt": "Which integral diverges?",
+      "choices": [
+        "$\\displaystyle\\int_1^{\\infty} \\dfrac{1}{x^{3/2}}\\,dx$",
+        "$\\displaystyle\\int_1^{\\infty} \\dfrac{1}{x}\\,dx$",
+        "$\\displaystyle\\int_0^1 \\sqrt{x}\\,dx$",
+        "$\\displaystyle\\int_0^1 x^{-1/2}\\,dx$"
+      ],
+      "answer": 1,
+      "explanation": "$\\int_1^{\\infty} x^{-p}\\,dx$ converges iff $p > 1$. For $p = 1$ (harmonic), it diverges.\n\nThe $p = 3/2$ integral converges; $\\int_0^1 \\sqrt{x}\\,dx$ and $\\int_0^1 x^{-1/2}\\,dx$ both converge."
+    },
+    {
+      "id": "acm16",
+      "prompt": "Area enclosed by $y = x^3$ and $y = x$ is",
+      "choices": [
+        "$\\dfrac{1}{2}$",
+        "$1$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{1}{4}$"
+      ],
+      "answer": 0,
+      "explanation": "Intersections at $x = -1,0,1$. By symmetry,\n\n$$\\text{Area} = 2\\int_0^1 (x - x^3)\\,dx = 2\\left[\\dfrac{x^2}{2} - \\dfrac{x^4}{4}\\right]_0^1 = 2\\left(\\dfrac{1}{2} - \\dfrac{1}{4}\\right) = \\dfrac{1}{2}.$$"
+    },
+    {
+      "id": "acm17",
+      "prompt": "Volume generated by rotating $y = x$, $0 \\le x \\le 2$, about the $x$-axis equals",
+      "choices": [
+        "$\\dfrac{8\\pi}{3}$",
+        "$\\dfrac{4\\pi}{3}$",
+        "$8\\pi$",
+        "$4\\pi$"
+      ],
+      "answer": 0,
+      "explanation": "Disk method: $V = \\pi\\int_0^2 x^2\\,dx = \\pi\\left[\\dfrac{x^3}{3}\\right]_0^2 = \\dfrac{8\\pi}{3}$."
+    },
+    {
+      "id": "acm18",
+      "prompt": "Solve $\\dfrac{dy}{dx} = xy$, $y(0) = 3$.",
+      "choices": [
+        "$3e^{x^2/2}$",
+        "$3e^{x^2}$",
+        "$e^{3x^2}$",
+        "$3x e^{x^2}$"
+      ],
+      "answer": 0,
+      "explanation": "Separate: $\\dfrac{dy}{y} = x\\,dx$ gives $\\ln|y| = \\dfrac{x^2}{2} + C$, so $y = A e^{x^2/2}$.\n\n$y(0) = 3$ implies $A = 3$."
+    },
+    {
+      "id": "acm19",
+      "prompt": "Solve $\\dfrac{dy}{dx} + 2y = e^{-2x}$.",
+      "choices": [
+        "$(x+C)e^{-2x}$",
+        "$C e^{-2x}$",
+        "$x e^{2x} + C$",
+        "$e^{-2x} + C$"
+      ],
+      "answer": 0,
+      "explanation": "Integrating factor $\\mu = e^{\\int 2\\,dx} = e^{2x}$.\n\n$$\\dfrac{d}{dx}(y e^{2x}) = 1 \\implies y e^{2x} = x + C \\implies y = (x+C)e^{-2x}.$$"
+    },
+    {
+      "id": "acm20",
+      "prompt": "Evaluate $\\displaystyle\\lim_{n \\to \\infty} \\sum_{k=1}^{n} \\dfrac{1}{n}\\sqrt{1 + \\left(\\dfrac{k}{n}\\right)^2}$.",
+      "choices": [
+        "$\\dfrac{1}{2}\\big(\\sqrt{2} + \\ln(1+\\sqrt{2})\\big)$",
+        "$\\sqrt{2}$",
+        "$\\ln(1+\\sqrt{2})$",
+        "$\\dfrac{\\sqrt{2}}{2}$"
+      ],
+      "answer": 0,
+      "explanation": "Riemann sum for $\\displaystyle\\int_0^1 \\sqrt{1+x^2}\\,dx$.\n\nThe antiderivative is $\\dfrac{1}{2}\\big(x\\sqrt{1+x^2} + \\ln\\big(x + \\sqrt{1+x^2}\\big)\\big)$, so the definite integral equals $\\dfrac{1}{2}\\big(\\sqrt{2} + \\ln(1+\\sqrt{2})\\big)$."
+    },
+    {
+      "id": "acm21",
+      "prompt": "If $A$ has eigenvalues $2$ and $-1$, then the eigenvalues of $A^2 + I$ are",
+      "choices": [
+        "$2$ and $-1$",
+        "$5$ and $2$",
+        "$4$ and $1$",
+        "$3$ and $0$"
+      ],
+      "answer": 1,
+      "explanation": "If $Av = \\lambda v$, then $(A^2 + I)v = (\\lambda^2 + 1)v$.\n\nFor $\\lambda = 2$: $4 + 1 = 5$. For $\\lambda = -1$: $1 + 1 = 2$. So the eigenvalues are $5$ and $2$."
+    },
+    {
+      "id": "acm22",
+      "prompt": "The orthogonal projection of $\\mathbf{b} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ onto $\\operatorname{span}\\left\\{\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}\\right\\}$ is",
+      "choices": [
+        "$\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$",
+        "$\\begin{pmatrix} \\dfrac{7}{2} \\\\ \\dfrac{7}{2} \\end{pmatrix}$",
+        "$\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$",
+        "$\\begin{pmatrix} \\dfrac{3}{2} \\\\ \\dfrac{3}{2} \\end{pmatrix}$"
+      ],
+      "answer": 1,
+      "explanation": "$$\\operatorname{proj}_{\\mathbf{a}}\\mathbf{b} = \\dfrac{\\mathbf{a}\\cdot\\mathbf{b}}{\\mathbf{a}\\cdot\\mathbf{a}}\\,\\mathbf{a} = \\dfrac{3+4}{1+1}\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\dfrac{7}{2}\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} \\dfrac{7}{2} \\\\ \\dfrac{7}{2} \\end{pmatrix}.$$"
+    },
+    {
+      "id": "acm23",
+      "prompt": "Let $A = \\begin{pmatrix} 1 & 1 & 0 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 1 \\end{pmatrix}$. Then $\\det(A) =$",
+      "choices": ["$0$", "$1$", "$-1$", "$-2$"],
+      "answer": 3,
+      "explanation": "Expand along the first row:\n\n$$\\det(A) = 1\\cdot(0\\cdot 1 - 1\\cdot 1) - 1\\cdot(1\\cdot 1 - 0\\cdot 1) + 0 = -1 - 1 = -2.$$"
+    },
+    {
+      "id": "acm24",
+      "prompt": "If $A$ and $B$ are similar $n \\times n$ matrices, which must be true?",
+      "choices": [
+        "$A = B$",
+        "$AB = BA$",
+        "$A$ and $B$ have the same characteristic polynomial",
+        "$A$ and $B$ are both diagonal"
+      ],
+      "answer": 2,
+      "explanation": "Similar matrices satisfy $B = P^{-1}AP$ for invertible $P$, so they share the same characteristic polynomial $\\det(A - \\lambda I) = \\det(B - \\lambda I)$ (hence the same eigenvalues). They need not be equal, commute, or be diagonal."
+    },
+    {
+      "id": "acm25",
+      "prompt": "Let $A$ be a $4 \\times 4$ matrix of rank $2$. Then $\\dim(\\ker A) =$",
+      "choices": ["$0$", "$1$", "$2$", "$4$"],
+      "answer": 2,
+      "explanation": "Rank–nullity: $\\operatorname{rank}(A) + \\dim(\\ker A) = n$.\n\nHere $2 + \\dim(\\ker A) = 4$, so $\\dim(\\ker A) = 2$."
+    }
+  ]
+}
