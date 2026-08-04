@@ -1,6 +1,50 @@
 # MCQ Docs Style Guide
 
-How to prepare **question** and **answer** markdown files under `docs/`. Follow this so future tests match [`advanced-math-mcq.md`](./advanced-math-mcq.md) and [`advanced-math-mcq-answers.md`](./advanced-math-mcq-answers.md).
+How to prepare **question** and **answer** markdown files under `docs/`. Follow this so future tests convert cleanly with [`scripts/md-to-json.mjs`](../scripts/md-to-json.mjs) and match the app’s KaTeX renderer.
+
+Reference set: [`differential-calculus/`](./differential-calculus/).
+
+---
+
+## Convert markdown → JSON
+
+After the question and answer docs are ready:
+
+```bash
+node scripts/md-to-json.mjs \
+  --questions docs/{topic}/{slug}.md \
+  --answers docs/{topic}/{slug}-answers.md \
+  --out src/data/{topic}.json \
+  --id {topic} \
+  --title "Human-readable title" \
+  --description "Topics: … · Questions: N · Level: …"
+```
+
+| Flag | Required | Notes |
+|------|----------|--------|
+| `--questions` | yes | Path to the questions markdown |
+| `--answers` | yes | Path to the answer-key markdown |
+| `--out` | yes | Output JSON under `src/data/` |
+| `--id` | yes | Stable set id (filename stem is fine) |
+| `--title` | yes | Shown in the set picker |
+| `--description` | no | Short blurb under the title |
+
+Paths may be relative to the repo root. The script fails if a question has no matching answer letter, or if a question lacks exactly four `A)`–`D)` options.
+
+### Converter expectations
+
+These formatting rules are **required** for a successful conversion (not only for readability):
+
+| Area | Required form |
+|------|----------------|
+| Question heading | `### Q1. …` then `### Q2. …` (continuous integers, period after the number) |
+| Choices | Exactly four lines `A)` `B)` `C)` `D)` |
+| Answer heading | `### Q1 — **B**` (em dash `—`, bold letter) |
+| Answer body | Starts after a blank line under the heading; ends before the next `### Q…`, `---`, or `## Quick Reference` |
+| Math | Inline `$...$`; display `$$...$$` on their own lines |
+| Multi-line stems | Continuation prose may use `###` (stripped by the converter) or plain paragraphs; display math stays in `$$` |
+
+The converter inserts blank lines around `$$…$$` blocks so the UI renders paragraphs and display math correctly. Still wrap every math fragment in `$` / `$$` — bare `\mathbb{R}` outside delimiters will show as raw LaTeX.
 
 ---
 
@@ -11,9 +55,9 @@ How to prepare **question** and **answer** markdown files under `docs/`. Follow 
 | `{slug}.md` | Questions only — no answers |
 | `{slug}-answers.md` | Answers, explanations, quick reference |
 
-Examples: `advanced-math-mcq.md` + `advanced-math-mcq-answers.md`.
+Examples: `differential-calculus-test.md` + `differential-calculus-test-answers.md` under `docs/differential-calculus/`.
 
-Keep both in `docs/`. Link them to each other.
+Keep both in `docs/` (optionally in a topic subfolder). Link them to each other.
 
 ---
 
@@ -176,6 +220,7 @@ Use three columns of `Q | Answer` when there are many questions.
 7. Multi-line stems: every prose continuation of the prompt uses `###` (display math stays in `$$`).
 8. Fractions use `\dfrac` (not `\frac`).
 9. Cross-links between the two files work.
+10. Run `node scripts/md-to-json.mjs …` and confirm the set loads in the app; check a multi-line prompt and an explanation with `$$`.
 
 ---
 

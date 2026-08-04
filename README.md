@@ -69,8 +69,35 @@ Sets are loaded automatically with Vite `import.meta.glob` — no catalog file t
 
 ## Adding a new exercise set
 
-1. Create `src/data/your-topic.json` using the format above.
-2. Commit and push to `main`.
+### Preferred: markdown → JSON
+
+Author questions and answers as markdown under `docs/` (see [`docs/mcq-docs-style-guide.md`](docs/mcq-docs-style-guide.md)), then convert:
+
+```bash
+node scripts/md-to-json.mjs \
+  --questions docs/your-topic/your-topic-test.md \
+  --answers docs/your-topic/your-topic-test-answers.md \
+  --out src/data/your-topic.json \
+  --id your-topic \
+  --title "Your Topic Test" \
+  --description "Topics: … · Questions: N · Level: …"
+```
+
+The script:
+
+- Parses `### Qn. …` prompts and `A)`–`D)` choices
+- Reads answers from `### Qn — **X**` headings
+- Escapes LaTeX for JSON and inserts blank lines around `$$…$$` so KaTeX/Markdown render correctly in the UI
+
+After conversion, spot-check a few questions in the app (especially multi-line prompts and explanations with display math).
+
+### Manual JSON
+
+You can also create `src/data/your-topic.json` by hand using the format above.
+
+### Deploy
+
+1. Commit and push to `main`.
 
 That is enough. The GitHub Action rebuilds the site and deploys `dist`. After the workflow finishes (often about 1–3 minutes), the new set appears in the picker. No code changes required.
 
