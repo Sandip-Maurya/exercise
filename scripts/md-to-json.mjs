@@ -79,7 +79,7 @@ function parseAnswers(text) {
   const answerMap = {}
   const normalized = text.replace(/\r\n/g, '\n')
   const re =
-    /### Q(\d+) — \*\*([A-D])\*\*\s*\n\n([\s\S]*?)(?=\n### Q|\n---|\n## Quick Reference|$)/g
+    /#{3,4} Q(\d+) — \*\*([A-D])\*\*\s*\n\n([\s\S]*?)(?=\n#{3,4} Q|\n---|\n## Quick Reference|$)/g
   let match
   while ((match = re.exec(normalized)) !== null) {
     answerMap[Number(match[1])] = {
@@ -92,7 +92,7 @@ function parseAnswers(text) {
 
 function parseQuestions(text) {
   const normalized = text.replace(/\r\n/g, '\n')
-  const blocks = normalized.split(/\n### Q(\d+)\.\s*/).slice(1)
+  const blocks = normalized.split(/\n#{3,4} Q(\d+)\.\s*/).slice(1)
   const questions = []
 
   for (let i = 0; i < blocks.length; i += 2) {
@@ -108,7 +108,7 @@ function parseQuestions(text) {
     const prompt = lines
       .slice(0, choiceStart)
       .join('\n')
-      .replace(/^###\s+/gm, '')
+      .replace(/^#{3,4}\s+/gm, '')
       .trim()
 
     const choices = lines
