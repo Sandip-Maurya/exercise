@@ -110,12 +110,12 @@ B) $\dfrac{\pi}{4}-\dfrac{1}{3}$
 C) $\dfrac{\pi}{4}+\dfrac{2}{3}$
 D) $1-\dfrac{\pi}{4}$
 
-#### Q16. $\displaystyle\int_{0}^{\pi / 4}\sqrt{\tan x}\, dx$ equals
+#### Q16. $\displaystyle\int_{0}^{\pi / 2}\ln(\sin x)\, dx$ equals
 
-A) $\dfrac{\pi}{2\sqrt{2}}$
-B) $\dfrac{\pi}{4}$
-C) $\dfrac{\pi}{\sqrt{2}}$
-D) $\dfrac{\pi}{2}$
+A) $-\dfrac{\pi}{2}\ln 2$
+B) $-\pi\ln 2$
+C) $0$
+D) $\dfrac{\pi}{2}\ln 2$
 
 #### Q17. $\displaystyle\int_{0}^{\pi}\dfrac{x\sin x}{1+\cos^{2}x}\, dx$ equals
 
@@ -150,7 +150,7 @@ D) $\dfrac{7}{3}$
 A) $e^{3}-1$
 B) $1+e+e^{2}$
 C) $e+e^{2}+e^{3}$
-D) $\dfrac{e^{3}-1}{e-1}$
+D) $\dfrac{e^{4}-1}{e-1}$
 
 #### Q22. Let $y$ satisfy $\dfrac{dy}{dx}+2y=\displaystyle\int_{0}^{1}y(t)\, dt$ with $y(0)=1$. Then $y(1)$ equals
 

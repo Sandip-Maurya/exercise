@@ -121,7 +121,11 @@ $$
 
 #### Q16 — **A**
 
-The substitution $t=\sqrt{\tan x}$ reduces the integral to a standard rational form whose value on $[0,1]$ is $\dfrac{\pi}{2\sqrt{2}}$.
+Let $I=\displaystyle\int_{0}^{\pi/2}\ln(\sin x)\, dx$. By symmetry, $\displaystyle\int_{0}^{\pi}\ln(\sin x)\, dx=2I$. Using $\sin x=2\sin(x/2)\cos(x/2)$,
+$$
+2I=\int_{0}^{\pi}\ln 2\, dx+\int_{0}^{\pi}\ln\!\bigl(\sin\tfrac{x}{2}\bigr)\, dx+\int_{0}^{\pi}\ln\!\bigl(\cos\tfrac{x}{2}\bigr)\, dx=\pi\ln 2+2I+2I,
+$$
+since each of the last two integrals equals $2I$ after the substitutions $t=x/2$ and the identity $\int_{0}^{\pi/2}\ln(\cos t)\, dt=I$. Hence $2I=\pi\ln 2+4I$, so $I=-\dfrac{\pi}{2}\ln 2$.
 
 #### Q17 — **B**
 
@@ -219,20 +223,3 @@ Nontrivial solutions exist precisely when the coefficient determinant vanishes:
 $$
 \begin{vmatrix} 1 & 1 & 1 \\ 2 & 3 & 1 \\ 3 & 5 & \lambda \end{vmatrix}=\lambda-1=0\implies\lambda=1.
 $$
-
----
-
-## Quick Reference
-
-| Q | Answer | Q | Answer | Q | Answer |
-|---|--------|---|--------|---|--------|
-| 1 | C | 11 | B | 21 | B |
-| 2 | B | 12 | C | 22 | B |
-| 3 | C | 13 | C | 23 | A |
-| 4 | B | 14 | B | 24 | B |
-| 5 | A | 15 | A | 25 | C |
-| 6 | A | 16 | A | 26 | C |
-| 7 | C | 17 | B | 27 | B |
-| 8 | C | 18 | B | 28 | C |
-| 9 | D | 19 | A | 29 | C |
-| 10 | B | 20 | D | 30 | B |

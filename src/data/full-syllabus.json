@@ -185,15 +185,15 @@
     },
     {
       "id": "q16",
-      "prompt": "$\\displaystyle\\int_{0}^{\\pi / 4}\\sqrt{\\tan x}\\, dx$ equals",
+      "prompt": "$\\displaystyle\\int_{0}^{\\pi / 2}\\ln(\\sin x)\\, dx$ equals",
       "choices": [
-        "$\\dfrac{\\pi}{2\\sqrt{2}}$",
-        "$\\dfrac{\\pi}{4}$",
-        "$\\dfrac{\\pi}{\\sqrt{2}}$",
-        "$\\dfrac{\\pi}{2}$"
+        "$-\\dfrac{\\pi}{2}\\ln 2$",
+        "$-\\pi\\ln 2$",
+        "$0$",
+        "$\\dfrac{\\pi}{2}\\ln 2$"
       ],
       "answer": 0,
-      "explanation": "The substitution $t=\\sqrt{\\tan x}$ reduces the integral to a standard rational form whose value on $[0,1]$ is $\\dfrac{\\pi}{2\\sqrt{2}}$."
+      "explanation": "Let $I=\\displaystyle\\int_{0}^{\\pi/2}\\ln(\\sin x)\\, dx$. By symmetry, $\\displaystyle\\int_{0}^{\\pi}\\ln(\\sin x)\\, dx=2I$. Using $\\sin x=2\\sin(x/2)\\cos(x/2)$,\n\n$$\n2I=\\int_{0}^{\\pi}\\ln 2\\, dx+\\int_{0}^{\\pi}\\ln\\!\\bigl(\\sin\\tfrac{x}{2}\\bigr)\\, dx+\\int_{0}^{\\pi}\\ln\\!\\bigl(\\cos\\tfrac{x}{2}\\bigr)\\, dx=\\pi\\ln 2+2I+2I,\n$$\n\nsince each of the last two integrals equals $2I$ after the substitutions $t=x/2$ and the identity $\\int_{0}^{\\pi/2}\\ln(\\cos t)\\, dt=I$. Hence $2I=\\pi\\ln 2+4I$, so $I=-\\dfrac{\\pi}{2}\\ln 2$."
     },
     {
       "id": "q17",
@@ -250,7 +250,7 @@
         "$e^{3}-1$",
         "$1+e+e^{2}$",
         "$e+e^{2}+e^{3}$",
-        "$\\dfrac{e^{3}-1}{e-1}$"
+        "$\\dfrac{e^{4}-1}{e-1}$"
       ],
       "answer": 1,
       "explanation": "$$\n\\int_{0}^{3}e^{\\lfloor x\\rfloor}\\, dx=\\int_{0}^{1}1\\, dx+\\int_{1}^{2}e\\, dx+\\int_{2}^{3}e^{2}\\, dx=1+e+e^{2}.\n$$"
